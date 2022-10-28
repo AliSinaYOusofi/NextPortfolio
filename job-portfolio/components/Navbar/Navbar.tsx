@@ -6,8 +6,8 @@ import MenuList from './MenuList';
 const Navbar : NextPage = () => {
 
     return (
-        <div className="flex flex-row bg-transparent md:justify-between justify-around items-center
-        md:mt-10">
+        <div className="flex flex-row bg-transparent md:justify-between justify-between items-center
+        md:mt-10 mt-3">
             
             <Name />
             <LightDark />
