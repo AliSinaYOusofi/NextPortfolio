@@ -5,10 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
 
 body {
-    background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-    background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
-    background: linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
-    background-size: 400% 400%;
+   
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
@@ -35,11 +32,12 @@ body::after {
   will-change: border-radius, transform;
   transform-origin: 55% 55%;
   pointer-events: none; 
+  
 }
   
 body::after {
-    width: 70vmin;
-    height: 70vmin;
+    width: 100vmin;
+    height: 100vmin;
     left: auto;
     right: -10vmin;
     top: auto;
@@ -96,20 +94,79 @@ body::after {
     transform: rotate(1turn); 
   } 
 }
-  .st0{display:none;}
-  .st1{display:inline;}
-  .st2{opacity:0.29;}
-  .st3{fill:#FFFFFF;}
-  .st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
-  .st5{clip-path:url(#SVGID_4_);}
-  .st6{clip-path:url(#SVGID_6_);}
-  .st7{clip-path:url(#SVGID_8_);}
-  .st8{clip-path:url(#SVGID_10_);}
-  .st9{fill:none;}
-  .st10{clip-path:url(#SVGID_12_);}
-  .st11{opacity:0.7;}
-  .st12{clip-path:url(#SVGID_14_);}
-  .st13{opacity:0.2;}
-  .st14{clip-path:url(#SVGID_16_);}
-  .st15{opacity:0.3;fill:#FFFFFF;enable-background:new ;
+
+/* p {
+    font-weight: 500;
+    text-transform: uppercase;
+    background: rgb(10,10,23);
+    background: linear-gradient(90deg, rgba(10,10,23,1) 0%, rgba(10,10,10,1) 100%); 
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 5s linear infinite;
+    position: relative;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  } */
+
+
+/* for styling may name ALi SIna YOusofi in Name Comp*/
+.p{
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0;
+   
+    background: white;
+    position: relative;
+    background: transparent;
+    color: #000;
+  }
+  
+.p:before{
+    content: "Ali Sina Yousofi";
+    position: absolute;
+    background: linear-gradient(#f70000, #f89200, #f8f501, #038f00,#0168f8, #a200f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 100% 90%;
+    line-height: 0.9;
+    clip-path: ellipse(120px 120px at -2.54% -9.25%);
+    animation: swing 5s infinite;
+    animation-direction: alternate;
 }
+
+@keyframes swing{
+    0%{
+        -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%);
+        clip-path: ellipse(120px 120px at -2.54% -9.25%)
+    }
+    50%{
+        -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+        clip-path: ellipse(120px 120px at 49.66% 64.36%);
+
+    }
+    100%{
+        -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%);
+        clip-path: ellipse(120px 120px at 102.62% -1.61%);
+    }
+}
+  
