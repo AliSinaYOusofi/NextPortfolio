@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Ali Sina</title>
-        <meta name="description" content="" />
+        <meta name="description" content="npm" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
