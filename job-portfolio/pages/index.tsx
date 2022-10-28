@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-
+import Navbar from "../components/Navbar/Navbar"
 export default function Home() {
   return (
     <div>
@@ -9,7 +9,7 @@ export default function Home() {
         <meta name="description" content="npm" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+      <Navbar />
     </div>
   );
 }
