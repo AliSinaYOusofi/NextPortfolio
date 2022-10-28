@@ -8,7 +8,7 @@ const MenuList: NextPage = () => {
     // for refs for doing it
     let rightLine  = React.useRef<HTMLDivElement>();
     let leftLine = React.useRef<HTMLDivElement>();
-    let middleLine = React.useRef<HTMLDivElement>();
+    let middleLine  = React.useRef<HTMLDivElement>();
 
     const showCross = () : void => {
         
