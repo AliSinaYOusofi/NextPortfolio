@@ -6,7 +6,7 @@ const MyImage: NextPage = () => {
 
     return (
         <>
-            <div className=" w-fit">
+            <div className="">
                     <Image
                         src={me}
                         alt="mena"
@@ -14,7 +14,7 @@ const MyImage: NextPage = () => {
                         height={400}
                         object-fit="contain"
                         loading='eager'
-                        className="object-cover w-[15rem] h-[15rem] rounded-md"
+                        className="object-cover w-[15rem] h-[15rem] rounded-md relative top-24 ml-[9rem]"
                     />
                 </div>
         </>
