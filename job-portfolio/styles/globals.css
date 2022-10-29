@@ -201,10 +201,14 @@ body::after {
     making the icons hover and affect all siblings
 */
 
-.flex:hover ~ .flex {
-    filter:blur(1px);
-}
-.icons:hover ~ .icons {
+/* .one:hover ~ .two {
     filter:blur(1px);
 }
 
+.one:hover ~ .three {
+    filter:blur(1px);
+}
+
+.one:hover ~ .four {
+    filter:blur(1px);
+} */
