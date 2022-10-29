@@ -195,4 +195,16 @@ body::after {
     100% {
      opacity: 1;
     }
-  }
+}
+
+/*
+    making the icons hover and affect all siblings
+*/
+
+.flex:hover ~ .flex {
+    filter:blur(1px);
+}
+.icons:hover ~ .icons {
+    filter:blur(1px);
+}
+
