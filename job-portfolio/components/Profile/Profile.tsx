@@ -12,7 +12,7 @@ const Profile: NextPage = () => {
         <>
             {/* the image should show it here */}
             <div className="w-[30%] bg-black/30 flex flex-col justify-items-center
-            items-center relative">
+            items-center relative rounded-md">
                 {/* // for image */}
                 
                 <WhatMe />

@@ -6,9 +6,11 @@ import Profile from './Profile/Profile'
 const Main: NextPage = () => {
 
     return (
-        <div>
+        <div className="w-full">
             <MyImage />
-            <Profile />
+            <div className="ml-20">
+                <Profile />
+            </div>
         </div>
     );
 }
