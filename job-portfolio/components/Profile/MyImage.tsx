@@ -14,7 +14,7 @@ const MyImage: NextPage = () => {
                         height={400}
                         object-fit="contain"
                         loading='eager'
-                        className="object-cover w-[15rem] h-[15rem] rounded-md relative top-24 ml-[9rem]"
+                        className="object-cover w-[15rem] h-[15rem] rounded-md relative top-24 md:ml-[9rem] ml-24"
                     />
                 </div>
         </>

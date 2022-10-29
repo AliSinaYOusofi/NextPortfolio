@@ -8,7 +8,7 @@ const Main: NextPage = () => {
     return (
         <div className="w-full">
             <MyImage />
-            <div className="ml-20">
+            <div className="md:ml-20 ml-10">
                 <Profile />
             </div>
         </div>
