@@ -4,7 +4,7 @@ import {BsFacebook, BsTwitter, BsDribbble, BsWhatsapp} from 'react-icons/bs';
 
 const WhatMe: NextPage = () => {
     return (
-        <div>
+        <div className="">
             <h1 className="font-bold tracking-widest text-xl"> Ali Sina Yousofi </h1>
             <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200"> &lt;Full-Stack-Developer /&gt; </h3>
             <div className="icons flex gap-x-2 text-2xl mt-3">
