@@ -6,7 +6,7 @@ const MyImage: NextPage = () => {
 
     return (
         <>
-            <div className="absolute w-fit">
+            <div className=" w-fit">
                     <Image
                         src={me}
                         alt="mena"
