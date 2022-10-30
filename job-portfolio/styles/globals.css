@@ -241,7 +241,7 @@ good that i added this effect
 }
 
 /* for the image effect */
-img:hover {
+.no:hover {
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 0.5s;
   
@@ -249,13 +249,13 @@ img:hover {
   animation-iteration-count: 1;
 }
 
-img {
+.no {
   transition: all 0.4 ease-in-out;
   
 }
 
-img:hover {
-    transform: rotate(10deg);
+.no:hover {
+    
     background: #e0e0e0;
     box-shadow:  4px 4px 20px darkslategray,
                  -4px -4px 20px gray;
