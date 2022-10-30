@@ -21,17 +21,17 @@ const MyImage: NextPage = () => {
     return (
         <>
             <div className="w-fit cursor-pointer" ref={ref} onClick={makeFullScreen}>
-                    <Image
-                        src={me}
-                        alt="mena"
-                        width={400}
-                        height={400}
-                        object-fit="contain"
-                        loading='eager'
-                        className="object-cover w-[15rem] h-[15rem] rounded-md relative top-24 md:ml-[9rem] ml-24
-                        transiti transition-all duration-300"
-                    />
-                </div>
+                <Image
+                    src={me}
+                    alt="mena"
+                    width={400}
+                    height={400}
+                    object-fit="contain"
+                    loading='eager'
+                    className="object-cover w-[15rem] h-[15rem] rounded-md relative top-24 md:ml-[9rem] ml-24
+                    transiti transition-all duration-300 z-[99]"
+                />
+            </div>
         </>
     )
 }
