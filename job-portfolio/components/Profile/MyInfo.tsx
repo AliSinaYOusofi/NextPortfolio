@@ -82,7 +82,7 @@ const MyInfo : NextPage = () => {
 
     return (
         <div className="w-[80%] bg-black/10 p-3 flex gap-y-3 flex-col mt-4
-        rounded-md parent
+        rounded-md parent py-8 px-4
         ">
             <div className="one flex justify-start items-center gap-x-3 group transition-all duration-300" ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne}> 
                 <div>
