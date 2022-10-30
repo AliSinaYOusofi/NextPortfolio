@@ -260,3 +260,22 @@ img:hover {
     box-shadow:  4px 4px 20px darkslategray,
                  -4px -4px 20px gray;
 }
+
+/* goes for the buttons */
+
+
+.menu {
+  box-shadow:  14px 14px 0px #474747;
+  
+}
+
+.menus {
+  filter: blur(1px);
+}
+.menus:hover {
+  filter: blur(0px);
+}
+
+.menu:hover {
+  box-shadow:  5px 5px 0px #474747;
+}
