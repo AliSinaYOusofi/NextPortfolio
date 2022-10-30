@@ -98,18 +98,43 @@ const WhatMe: NextPage = () => {
     // the text to animate
     let myJob = "<FullStackDeveloper />"
     React.useEffect( () => {
-        let timeout = setTimeout( () => {
-            setText(myJob); // tommorow i make it run
-            console.log(text);
-        }, 100)
-
-        return clearTimeout(timeout);
+        let timeout = setInterval( () => {
+            myJob = myJob.slice(0, myJob.length  -1 );
+            if (myJob.length === 0)
+                myJob = "<FullStackDeveloper />"
+            setText(myJob.slice(0, myJob.length -1)); // tommorow i make it run
+        }, 10000)
+        
+        
+       
     }, [text, myJob, isTyping]);
-    console.log(text);
+    
+    // type for the animation of letters in i
     return (
         <div className="mt-28">
             <h1 className="font-bold tracking-widest text-xl"> Ali Sina Yousofi </h1>
-            <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200 mt-2"> {text} </h3>
+            {/* <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200 mt-2"> {text} </h3> */}
+           
+                    <h5 className="text-xl">
+                    <span className="web__dev" style={{"--i": 1}}>&lt;</span>
+                    
+                    <span className="web__dev" style={{"--i": 2}}>F</span>
+                    <span className="web__dev" style={{"--i": 3}}>U</span>
+                    <span className="web__dev" style={{"--i": 4}}>L</span>
+                    <span className="web__dev" style={{"--i": 5}}>L</span>
+                    <span className="web__dev" style={{"--i": 6}}>-</span>
+                    <span className="web__dev" style={{"--i": 7}}>S</span>
+                    <span className="web__dev" style={{"--i": 8}}>T</span>
+                    <span className="web__dev" style={{"--i": 9}}>A</span>
+                    <span className="web__dev" style={{"--i": 10}}>C</span>
+                    <span className="web__dev" style={{"--i": 11}}>K</span>
+                    <span className="web__dev" style={{"--i": 12}}>-</span>
+                    <span className="web__dev" style={{"--i": 13}}>D</span>
+                    <span className="web__dev" style={{"--i": 14}}>E</span>
+                    <span className="web__dev" style={{"--i": 15}}>V</span>
+                    <span className="web__dev" style={{"--i": 16}}>/</span>
+                    <span className="web__dev" style={{"--i": 17}}>&gt;</span>
+                </h5>
             <div className="flex gap-x-2 text-2xl mt-3">
                 <div ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne} className="icon1 transition-all duration-300  bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsFacebook /> </div>
                 <div  ref={two} onMouseEnter={blurTwo} onMouseLeave={undoBlurTwo} className="icon2 face transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsTwitter /></div>

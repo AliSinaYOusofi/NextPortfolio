@@ -212,3 +212,26 @@ body::after {
 .one:hover ~ .four {
     filter:blur(1px);
 } */
+
+/* this is for the waivy text */
+
+.web__dev {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0);
+    color: rgb(15, 14, 14);
+  }
+  20% {
+    transform: translateY(6px);
+    color: gray;
+  }
+}
