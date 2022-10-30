@@ -12,7 +12,7 @@ const Main: NextPage = () => {
             <div className="md:ml-20 ml-10">
                 <Profile />
             </div>
-           
+            <MenuItem show={false}/>
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import React, { MutableRefObject } from 'react'
+import MenuItem from '../Menu.tsx/MenuItem';
 
 const MenuList: NextPage = () => {
     // for if its clicked or not
@@ -42,6 +43,10 @@ const MenuList: NextPage = () => {
                 <div ref={middleLine} className="w-8 h-0.5 bg-gray-600 transition-all duration-300"></div>
                 <div ref={leftLine} className="w-8 h-0.5 bg-gray-600 transition-all duration-300"></div>
             </div>
+
+            {
+                clicked ? <MenuItem show={true}/> : null
+            }
         </div>
     );
 }
