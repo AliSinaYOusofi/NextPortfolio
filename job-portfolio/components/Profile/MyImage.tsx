@@ -2,7 +2,8 @@ import { NextPage } from 'next'
 import Image from 'next/image';
 import React from 'react'
 import me from  "../../public/cropped-1366-768-642540.png";
-import eye from '../../public/dot-popular-science-monthly-volume-may-illusions-37.png';
+import eye from '../../public/white.PNG';
+
 const MyImage: NextPage = () => {
 
     // making the image full screen
@@ -78,39 +79,43 @@ const MyImage: NextPage = () => {
                     <div className="eye absolute w-2 rounded-full h-2 bg-black lg:top-[9rem] z-[998] lg:left-[20.7rem] top-[9rem] left-[14.7rem] "></div>
                     <div className="eye absolute w-2 rounded-full h-2 bg-black lg:top-[16rem] z-[998] lg:left-[10.7rem] top-[16rem] left-[10.9rem] "></div>
                     <div className="eye absolute w-2 rounded-full h-2 bg-black lg:top-[15.8rem] z-[100] lg:left-[14rem] top-[16rem] left-[7.6rem] "></div> */}
+                
+                <div className="bg-white w-fit">
+
+                    <Image 
+                        src={eye}
+                        alt="eye"
+                        width={20}
+                        height={20}
+                        className="  absolute eye w-fit  lg:top-[8.7rem] z-[999] lg:left-[17.9rem] top-[8.5rem] left-[15rem] rounded-full"
+
+                    />
+                    <Image 
+                        src={eye}
+                        alt="eye"
+                        width={20}
+                        height={20}
+                        className="absolute rounded-full bg-white eye w-fit  lg:top-[8.6rem] z-[999] lg:left-[20.9rem] top-[8.2rem] left-[18rem]"
+
+                    />
+                    <Image 
+                        src={eye}
+                        alt="eye"
+                        width={20}
+                        height={20}
+                        className="absolute eye w-fit rounded-full lg:top-[15.8rem] z-[999] lg:left-[10.7rem] top-[15.7rem] left-[7.6rem]"
+
+                    />
                     
-                <Image 
-                    src={eye}
-                    alt="eye"
-                    width={120}
-                    height={120}
-                    className="absolute eye  lg:top-[5.7rem] z-[999] lg:left-[17.9rem] top-[9rem] left-[17.7rem] rounded-full"
+                    <Image 
+                        src={eye}
+                        alt="eye"
+                        width={20}
+                        height={20}
+                        className="absolute eye w-fit  lg:top-[15rem] rounded-full z-[999] lg:left-[13.9rem] top-[15.1rem] left-[11rem]"
 
-                />
-                <Image 
-                    src={eye}
-                    alt="eye"
-                    width={120}
-                    height={120}
-                    className="absolute eye  lg:top-[5.7rem] z-[999] lg:left-[14.9rem] top-[9rem] left-[17.7rem]"
-
-                />
-                <Image 
-                    src={eye}
-                    alt="eye"
-                    width={120}
-                    height={120}
-                    className="absolute eye  lg:top-[12.7rem] z-[999] lg:left-[7.9rem] top-[9rem] left-[17.7rem]"
-
-                />
-                <Image 
-                    src={eye}
-                    alt="eye"
-                    width={120}
-                    height={120}
-                    className="absolute eye  lg:top-[12.4rem] z-[999] lg:left-[10.9rem] top-[9rem] left-[17.7rem]"
-
-                />
+                    />
+                </div>
                     
             </div>
         </>
