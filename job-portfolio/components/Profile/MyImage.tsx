@@ -4,9 +4,23 @@ import React from 'react'
 import me from  "../../public/pexels-ivan-siarbolin-3695799.jpg";
 const MyImage: NextPage = () => {
 
+    // making the image full screen
+    let ref = React.useRef<HTMLDivElement>(null);
+    let makeFullScreen = () : void => {
+        if(ref.current) {
+            if (!document.fullscreenElement) {
+                ref.current.requestFullscreen({ navigationUI: "auto" })
+                    .catch(error => alert("something is wrong with you browser"));
+            }
+            else {
+                document.exitFullscreen();
+            }
+        }
+    }
+
     return (
         <>
-            <div className="">
+            <div className="" ref={ref} onClick={makeFullScreen}>
                     <Image
                         src={me}
                         alt="mena"

@@ -213,7 +213,9 @@ body::after {
     filter:blur(1px);
 } */
 
-/* this is for the waivy text */
+/* this is for the waivy text 
+good that i added this effect
+*/
 
 .web__dev {
   font-family: 'Alfa Slab One', cursive;
@@ -222,16 +224,42 @@ body::after {
   letter-spacing: 1px;;
   text-transform: uppercase;
   animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
+  animation-delay: calc(.2s * var(--i));
 }
 
 @keyframes waviy {
   0%,40%,100% {
-    transform: translateY(0);
+   
     color: rgb(15, 14, 14);
+    opacity: 30;
   }
   20% {
-    transform: translateY(6px);
+    transform: translateY(2px);
     color: gray;
+    opacity: 100;
+  }
+}
+
+/* for the image effect */
+img:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg);
   }
 }

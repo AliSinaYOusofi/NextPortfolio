@@ -92,22 +92,9 @@ const WhatMe: NextPage = () => {
     // for the full-stack dev part using useEffect()
 
     // sleep for asecond like python's sleep
-    const sleepingFor = (ms: number ) : Promise<number> => {
-        return new Promise( (resolve) => setTimeout(resolve, ms));
-    }
+    
     // the text to animate
-    let myJob = "<FullStackDeveloper />"
-    React.useEffect( () => {
-        let timeout = setInterval( () => {
-            myJob = myJob.slice(0, myJob.length  -1 );
-            if (myJob.length === 0)
-                myJob = "<FullStackDeveloper />"
-            setText(myJob.slice(0, myJob.length -1)); // tommorow i make it run
-        }, 10000)
-        
-        
-       
-    }, [text, myJob, isTyping]);
+    
     
     // type for the animation of letters in i
     return (
@@ -117,7 +104,6 @@ const WhatMe: NextPage = () => {
            
                     <h5 className="text-xl">
                     <span className="web__dev" style={{"--i": 1}}>&lt;</span>
-                    
                     <span className="web__dev" style={{"--i": 2}}>F</span>
                     <span className="web__dev" style={{"--i": 3}}>U</span>
                     <span className="web__dev" style={{"--i": 4}}>L</span>
