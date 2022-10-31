@@ -37,10 +37,10 @@ const MyImage: NextPage = () => {
         
             const angleDeg = getAngle(mouseX, mouseY, anchorX, anchorY);
             
-            const eyes : NodeList | HTMLDivElement | Array<NodeList> = document.querySelectorAll(".eye");
+            const eyes : NodeList | HTMLDivElement | Array<NodeList> = document.querySelectorAll(".eye")
     
             eyes.forEach(eye => {
-              eye.style.transform = `rotate(${angleDeg + 90}deg)`; // did not work becuase of a semicolon
+              (eye.style as CSSStyleDeclaration).transform = `rotate(${angleDeg + 90}deg)`; // did not work becuase of a semicolon
               rabbit.style.filter = `hue-rotate(${angleDeg -30}deg)`;
             })
           });
@@ -87,15 +87,14 @@ const MyImage: NextPage = () => {
                         alt="eye"
                         width={20}
                         height={20}
-                        className="  absolute eye w-fit  lg:top-[8.7rem] z-[999] lg:left-[17.9rem] top-[8.5rem] left-[15rem] rounded-full"
-
+                        className="  absolute eye w-fit  lg:top-[8.3rem] z-[999] lg:left-[17.9rem] top-[8.5rem] left-[15rem] rounded-full"
                     />
                     <Image 
                         src={eye}
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute rounded-full bg-white eye w-fit  lg:top-[8.6rem] z-[999] lg:left-[20.9rem] top-[8.2rem] left-[18rem]"
+                        className="absolute rounded-full bg-white eye w-fit  lg:top-[8.2rem] z-[999] lg:left-[20.9rem] top-[8.2rem] left-[18rem]"
 
                     />
                     <Image 
