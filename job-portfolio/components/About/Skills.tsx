@@ -15,7 +15,7 @@ const Skills: NextPage = () => {
         <div className="mt-20 text-white">
             <h1 className="font-extrabold text-3xl mt-8"> <span className="text-purple-400">const</span> <span className="text-blue-400">FrontEndTechs = Skills () : =&gt;</span> &#123;&#125;</h1>
             
-            <div className="flex justify-between items-center flex-wrap gap-x-1 gap-y-3">
+            <div className="flex justify-between items-center flex-wrap  gap-y-3 md:gap-x-0 gap-x-1">
                 <SkillsCard text={"Hypertext Markup Language, a standardized system for tagging ... ."} icon={<AiFillHtml5 />} header="HTML"/>
                 <SkillsCard text={"CSS stands for Cascading Style Sheets · CSS describes how HTML elements are to be ... ."} icon={<TbBrandCss3 />} header="CSS"/>
                 <SkillsCard text={"A utility-first CSS framework packed with classes like flex , pt-4 , text-center and more."} icon={<SiTailwindcss />} header="Tailwind"/>
