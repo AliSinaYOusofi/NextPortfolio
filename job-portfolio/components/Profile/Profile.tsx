@@ -12,8 +12,8 @@ const Profile: NextPage = () => {
     return (
         <>
             {/* the image should show it here */}
-            <div className=" bg-black/30 flex flex-col justify-items-center
-            items-center relative rounded-md md:ml-10 md:w-2/3 w-[80%] h-fit">
+            <div className=" bg-black/30 flex flex-col justify-center relative
+            items-center  rounded-md md:w-[40%] md:ml-3 w-[80%] h-fit">
                 {/* // for image */}
                 <MyImage />
                 <WhatMe />

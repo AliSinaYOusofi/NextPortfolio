@@ -8,8 +8,8 @@ import Profile from './Profile/Profile'
 const Main: NextPage = () => {
 
     return (
-        <div className=" mt-20 w-full md:grid md:grid-rows-2 md:grid-cols-2
-        flex flex-col flex-wrap items-center">
+        <div className="main mt-20 w-full
+        flex md:flex-row flex-col   justify-between items-center gap-x-2">
             
             
                 <Profile />
