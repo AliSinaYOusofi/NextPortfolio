@@ -4,8 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
 
+html {
+  font-family: "Fira Code";
+}
 body {
-   
+    
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
@@ -278,3 +281,5 @@ good that i added this effect
 .menu:hover {
   box-shadow:  5px 5px 0px #474747;
 }
+
+/* styling the cursor */

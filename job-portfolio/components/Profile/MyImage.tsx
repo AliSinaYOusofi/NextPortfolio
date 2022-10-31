@@ -56,7 +56,7 @@ const MyImage: NextPage = () => {
         return rad * 180 / Math.PI;
       }
     return (
-        <>
+        
             <div className="w-fit cursor-pointer relative" ref={ref} onClick={makeFullScreen}>
                 <Image
                     id="rabbit"
@@ -117,7 +117,7 @@ const MyImage: NextPage = () => {
                 </div>
                     
             </div>
-        </>
+        
     )
 }
 
