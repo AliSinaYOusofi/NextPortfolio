@@ -9,7 +9,7 @@ const Main: NextPage = () => {
 
     return (
         <div className="main mt-20 w-full
-        flex md:flex-row flex-col   justify-between items-center gap-x-2">
+        flex md:flex-row flex-col   justify-between md:items-start items-center gap-x-2">
             
             
                 <Profile />
