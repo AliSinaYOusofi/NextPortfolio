@@ -12,10 +12,10 @@ const Profile: NextPage = () => {
     return (
         <>
             {/* the image should show it here */}
-            <div className="md:w-[30%] w-[90%] bg-black/30 flex flex-col justify-items-center
-            items-center relative rounded-md">
+            <div className=" bg-black/30 flex flex-col justify-items-center
+            items-center relative rounded-md md:ml-10 md:w-2/3 w-[80%] h-fit">
                 {/* // for image */}
-                
+                <MyImage />
                 <WhatMe />
                 <MyInfo />
                 <CVButton />

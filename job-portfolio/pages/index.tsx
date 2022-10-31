@@ -15,6 +15,7 @@ export default function Home() {
       <div>
         
       </div>
+      <MenuItem show={false}/>
       <Main />
       
     </div>

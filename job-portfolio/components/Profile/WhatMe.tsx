@@ -98,7 +98,7 @@ const WhatMe: NextPage = () => {
     
     // type for the animation of letters in i
     return (
-        <div className="mt-28">
+        <div className="mt-4">
             <h1 className="font-bold tracking-widest text-xl"> Ali Sina Yousofi </h1>
             {/* <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200 mt-2"> {text} </h3> */}
            
