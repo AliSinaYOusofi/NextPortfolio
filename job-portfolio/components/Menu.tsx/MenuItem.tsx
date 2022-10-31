@@ -11,7 +11,7 @@ interface Props {
 const MenuItem: NextPage<Props> = (props) => {
     return(
         <div style={{display: props.show ? "flex" : "hidden"}} className="menus hidden md:flex flex-row-reverse bg-black/30 fixed z-90 md:top-[80%] lg:right-[30rem]
-        right-[2rem] top-[80%] z-10
+        right-[1rem] top-[80%] z-10
         
         justify-center items-center p-4 lg:p-6 rounded-md gap-x-10  transition-all duration-300">
             

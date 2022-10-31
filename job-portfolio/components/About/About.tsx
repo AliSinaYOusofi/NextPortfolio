@@ -6,8 +6,7 @@ import Skills from "./Skills";
 const About : NextPage = () => {
     return (
         <>
-            <div className=" top-[25%] absolute right-[5%] w-[55%] bg-black
-            p-10 rounded-md mt-9">
+            <div className=" p-10 rounded-md md:-ml-10 ">
                <AboutMeText />
                <Skills />
             </div>

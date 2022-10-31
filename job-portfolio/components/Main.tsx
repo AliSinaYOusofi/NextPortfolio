@@ -8,13 +8,14 @@ import Profile from './Profile/Profile'
 const Main: NextPage = () => {
 
     return (
-        <div className="relative">
-            <MyImage />
-            <div className="md:ml-20 ml-10 relative">
+        <div className=" mt-20 w-full md:grid md:grid-rows-2 md:grid-cols-2
+        flex flex-col flex-wrap items-center">
+            
+            
                 <Profile />
-            </div>
-            <MenuItem show={false}/>
-            <About />
+            
+               
+                <About />
         </div>
     );
 }

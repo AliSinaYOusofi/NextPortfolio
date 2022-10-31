@@ -57,7 +57,7 @@ const MyImage: NextPage = () => {
       }
     return (
         
-            <div className="w-fit cursor-pointer relative" ref={ref} onClick={makeFullScreen}>
+            <div className="" ref={ref} onClick={makeFullScreen}>
                 <Image
                     id="rabbit"
                     src={me}
@@ -66,7 +66,7 @@ const MyImage: NextPage = () => {
                     height={400}
                     object-fit="contain"
                     loading='eager'
-                    className="no object-cover  w-[15rem] h-[15rem] rounded-md relative top-24 md:ml-[9rem] ml-24
+                    className="no object-cover  w-[15rem] h-[15rem] rounded-md mt-8
                     transiti transition-all duration-300 z-[99]"
                 />
                 
