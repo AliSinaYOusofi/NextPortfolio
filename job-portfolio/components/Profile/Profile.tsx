@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import React from 'react'
 import CVButton from './CVButton';
+import Languages from './Languages';
 import MyImage from './MyImage';
 import MyInfo from './MyInfo';
 
@@ -19,6 +20,7 @@ const Profile: NextPage = () => {
                 <WhatMe />
                 <MyInfo />
                 <CVButton />
+                <Languages />
             </div>
         </>
     );
