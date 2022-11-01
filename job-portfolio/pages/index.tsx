@@ -3,6 +3,8 @@ import Script from "next/script";
 import Main from "../components/Main";
 import MenuItem from "../components/Menu.tsx/MenuItem";
 import Navbar from "../components/Navbar/Navbar"
+import AllTesimonies from "../components/Testimonials/AllTesimonies";
+import Testimony from "../components/Testimonials/Tesmony";
 export default function Home() {
   return (
     <div>
@@ -17,7 +19,7 @@ export default function Home() {
       </div>
       <MenuItem show={false}/>
       <Main />
-      
+      <AllTesimonies />
     </div>
   );
 }
