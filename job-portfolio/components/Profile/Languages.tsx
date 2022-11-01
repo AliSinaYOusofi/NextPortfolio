@@ -3,9 +3,8 @@ import React from "react";
 
 const Languages: NextPage = () => {
     const counter: number = 90;
-
     return (
-        <div className="w-full flex justify-center items-center gap-x-10  py-2">
+        <div className="w-full flex justify-center items-center gap-x-10  py-2 mt-3">
             
             <div className=" w-fit flex flex-col items-center justify-center
             ">
