@@ -286,8 +286,8 @@ good that i added this effect
 
 .skills:hover {
   background: #e0e0e0;
-  box-shadow:  4px 4px 5px darkslategray,
-               4px 4px 5px gray;
+  box-shadow:  4px 4px 5px rgb(21, 24, 24),
+               4px 4px 5px rgb(22, 21, 21);
 
 }
 
