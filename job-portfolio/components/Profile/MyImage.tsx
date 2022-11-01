@@ -70,16 +70,6 @@ const MyImage: NextPage = () => {
                     transiti transition-all duration-300 z-[99]"
                 />
                 
-                <div className="absolute w-4 rounded-full h-4 bg-white lg:top-[9rem] z-[998] lg:left-[17.7rem] top-[9rem] left-[17.7rem]"></div>
-                <div className="absolute w-4 rounded-full h-4 bg-white lg:top-[9rem] z-[998] lg:left-[20.7rem] top-[9rem] left-[14.7rem] "></div>
-                <div className="absolute w-4 rounded-full h-4 bg-white lg:top-[16rem] z-[998] lg:left-[10.7rem] top-[16rem] left-[10.9rem] "></div>
-                <div className="absolute w-4 rounded-full h-4 bg-white lg:top-[15.8rem] z-[100] lg:left-[14rem] top-[16rem] left-[7.6rem] "></div>
-
-                    {/* <div className="eye absolute w-2 rounded-full h-2 bg-black "></div>
-                    <div className="eye absolute w-2 rounded-full h-2 bg-black lg:top-[9rem] z-[998] lg:left-[20.7rem] top-[9rem] left-[14.7rem] "></div>
-                    <div className="eye absolute w-2 rounded-full h-2 bg-black lg:top-[16rem] z-[998] lg:left-[10.7rem] top-[16rem] left-[10.9rem] "></div>
-                    <div className="eye absolute w-2 rounded-full h-2 bg-black lg:top-[15.8rem] z-[100] lg:left-[14rem] top-[16rem] left-[7.6rem] "></div> */}
-                
                 <div className="bg-white w-fit">
 
                     <Image 
@@ -87,14 +77,14 @@ const MyImage: NextPage = () => {
                         alt="eye"
                         width={20}
                         height={20}
-                        className="  absolute eye w-fit  lg:top-[8.3rem] z-[999] lg:left-[17.9rem] top-[8.5rem] left-[15rem] rounded-full"
+                        className="  absolute eye w-fit  lg:top-[4.5rem] z-[999] lg:left-[12.9rem] top-[4.4rem] left-[12rem] rounded-full"
                     />
                     <Image 
                         src={eye}
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute rounded-full bg-white eye w-fit  lg:top-[8.2rem] z-[999] lg:left-[20.9rem] top-[8.2rem] left-[18rem]"
+                        className="absolute rounded-full bg-white eye w-fit  lg:top-[4.2rem] z-[999] lg:left-[15.9rem] top-[4rem] left-[15rem]"
 
                     />
                     <Image 
@@ -102,7 +92,7 @@ const MyImage: NextPage = () => {
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute eye w-fit rounded-full lg:top-[15.8rem] z-[999] lg:left-[10.7rem] top-[15.7rem] left-[7.6rem]"
+                        className="absolute eye w-fit rounded-full lg:top-[11.7rem] z-[999] lg:left-[5.7rem] top-[11.7rem] left-[5rem]"
 
                     />
                     
@@ -111,7 +101,7 @@ const MyImage: NextPage = () => {
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute eye w-fit  lg:top-[15rem] rounded-full z-[999] lg:left-[13.9rem] top-[15.1rem] left-[11rem]"
+                        className="absolute eye w-fit  lg:top-[11rem] rounded-full z-[999] lg:left-[9rem] top-[11rem] left-[8.3rem]"
 
                     />
                 </div>
