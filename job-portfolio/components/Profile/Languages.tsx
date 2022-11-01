@@ -19,8 +19,6 @@ const Languages: NextPage = () => {
                 <div className="bg-black/30 rounded-full  text-center w-fit py-3 px-[10px] border-2 border-[gray]">70%</div>
                 <i className="text-sm">Urdu</i>
             </div>
-
-            
         </div>
     );
 }
