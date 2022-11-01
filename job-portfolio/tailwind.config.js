@@ -12,6 +12,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
     require("daisyui"),
-    require("prettier-plugin-tailwindcss")
+    require("prettier-plugin-tailwindcss"),
+    require("tailwind-scrollbar-hide")
   ],
 };
