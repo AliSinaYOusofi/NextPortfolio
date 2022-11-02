@@ -111,8 +111,8 @@ const Footer : NextPage = () => {
             </div>
 
             <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-                © 2021 Copyright:
-                <a className="text-whitehite" href="https://tailwind-elements.com/">Tailwind Elements</a>
+                © 2021 Copyright 
+                <a className="text-whitehite" href="https://tailwind-elements.com/"> Ali Sina Yousofi</a>
             </div>
         </footer>
     );

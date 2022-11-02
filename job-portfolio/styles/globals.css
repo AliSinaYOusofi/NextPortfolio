@@ -266,34 +266,19 @@ good that i added this effect
 /* goes for the buttons */
 
 
-.menu {
-  box-shadow:  14px 14px 0px #474747;
-  
-}
-
-.menus {
-  filter: blur(1px);
-}
-.menus:hover {
-  filter: blur(0px);
-}
-
-.menu:hover {
-  box-shadow:  5px 5px 0px #474747;
-}
 
 /* styling the cursor */
 
 .skills:hover {
-  background: #2c3e56;
-  box-shadow:  4px 4px 15px #1d2530,
+  background: #1a2027;
+  box-shadow:  4px 4px 15px #171b20,
                -4px -4px 15px #090b0e;
 
 }
 
 /* styling the grid */
 .uppercase {
-  transition: all 0.4s ease;
+  transition: all 0.1s ease;
 }
 
-.uppercase:hover { transform: translateY(-px)}
+.uppercase:hover { transform: translateY(-2px)}
