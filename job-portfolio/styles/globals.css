@@ -285,10 +285,15 @@ good that i added this effect
 /* styling the cursor */
 
 .skills:hover {
-  background: #e0e0e0;
-  box-shadow:  4px 4px 5px rgb(21, 24, 24),
-               4px 4px 5px rgb(22, 21, 21);
+  background: #2c3e56;
+  box-shadow:  4px 4px 15px #1d2530,
+               -4px -4px 15px #090b0e;
 
 }
 
 /* styling the grid */
+.uppercase {
+  transition: all 0.4s ease;
+}
+
+.uppercase:hover { transform: translateY(-px)}

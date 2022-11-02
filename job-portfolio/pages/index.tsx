@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
+import Footer from "../components/Footer/Footer";
 import Main from "../components/Main";
 import MenuItem from "../components/Menu.tsx/MenuItem";
 import Navbar from "../components/Navbar/Navbar"
@@ -20,6 +21,7 @@ export default function Home() {
       <MenuItem show={false}/>
       <Main />
       <AllTesimonies />
+      <Footer />
     </div>
   );
 }
