@@ -57,7 +57,7 @@ const MenuItem: NextPage<Props> = (props) => {
             }
 
             <div onClick={handleMenuClick} className="cursor-pointer transition-all duration-300 
-            bg-black/30 rounded-full p-2">
+            bg-black/30 rounded-full p-2 menu">
                 {
                     menu 
                     ?
