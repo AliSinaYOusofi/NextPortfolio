@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import Main from "../components/Main";
 import MenuItem from "../components/Menu.tsx/MenuItem";
 import Navbar from "../components/Navbar/Navbar"
+import Projects from "../components/Projects/Projects";
 import AllTesimonies from "../components/Testimonials/AllTesimonies";
 import Testimony from "../components/Testimonials/Tesmony";
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
       <MenuItem show={false}/>
       <Main />
       <AllTesimonies />
-      <Footer />
+      <Projects />
+      <Footer /> 
     </div>
   );
 }
