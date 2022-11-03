@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
+import Contact from "../components/Contact/Contarct";
 import Footer from "../components/Footer/Footer";
 import Main from "../components/Main";
 import MenuItem from "../components/Menu.tsx/MenuItem";
@@ -23,6 +24,7 @@ export default function Home() {
       <Main />
       <AllTesimonies />
       <Projects />
+      <Contact />
       <Footer /> 
     </div>
   );
