@@ -57,7 +57,7 @@ const MyImage: NextPage = () => {
       }
     return (
         
-            <div className="" ref={ref} onClick={makeFullScreen}>
+            <div className="relative" ref={ref} onClick={makeFullScreen}>
                 <Image
                     id="rabbit"
                     src={me}
@@ -70,21 +70,21 @@ const MyImage: NextPage = () => {
                     transiti transition-all duration-300 z-[99]"
                 />
                 
-                <div className="bg-white w-fit">
+                
 
                     <Image 
                         src={eye}
                         alt="eye"
                         width={20}
                         height={20}
-                        className="  absolute eye w-fit  lg:top-[4.5rem] z-[999] lg:left-[12.9rem] top-[4.4rem] left-[12rem] rounded-full"
+                        className="  absolute eye w-fit  lg:top-[4.5rem] z-[999] lg:left-[8.9rem] top-[4.4rem] left-[8.6rem] rounded-full"
                     />
                     <Image 
                         src={eye}
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute rounded-full bg-white eye w-fit  lg:top-[4.2rem] z-[999] lg:left-[15.9rem] top-[4rem] left-[15rem]"
+                        className="absolute rounded-full bg-white eye w-fit  lg:top-[4.2rem] z-[999] lg:left-[11.7rem] top-[4rem] left-[11.8rem]"
 
                     />
                     <Image 
@@ -92,21 +92,19 @@ const MyImage: NextPage = () => {
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute eye w-fit rounded-full lg:top-[11.7rem] z-[999] lg:left-[5.7rem] top-[11.7rem] left-[5rem]"
+                        className="absolute eye w-fit rounded-full lg:top-[11.7rem] z-[999] lg:left-[1.7rem] top-[11.7rem] left-[1.8rem]"
 
                     />
-                    
+
                     <Image 
                         src={eye}
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute eye w-fit  lg:top-[11rem] rounded-full z-[999] lg:left-[9rem] top-[11rem] left-[8.3rem]"
-
+                        className="absolute eye w-fit  lg:top-[11rem] rounded-full z-[999] lg:left-[5rem]  top-[11rem] left-[5rem]"
                     />
-                </div>
-                    
-            </div>
+                </div>  
+           
         
     )
 }
