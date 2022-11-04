@@ -21,7 +21,7 @@ const MenuItem: NextPage<Props> = (props) => {
     return(
         <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%"}} className="menus hidden md:flex flex-row-reverse 
         bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
-        right-[0%] top-[86%] z-10 w-fit md:right-[10%] lg:right-[25%]
+        right-[0%] top-[63%] z-10 w-fit md:right-[10%] lg:right-[25%]
         justify-center items-center p-3  text-sm md:text-2xl lg:p-3 rounded-md md:gap-x-10 gap-x-4  transition-all duration-300">
             
             {

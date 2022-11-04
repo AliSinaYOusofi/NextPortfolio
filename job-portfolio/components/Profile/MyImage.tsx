@@ -64,6 +64,7 @@ const MyImage: NextPage = () => {
                     alt="mena"
                     width={400}
                     height={400}
+                    
                     object-fit="contain"
                     loading='eager'
                     className="no object-cover  w-[15rem] h-[15rem] rounded-md mt-8
@@ -84,7 +85,7 @@ const MyImage: NextPage = () => {
                         alt="eye"
                         width={20}
                         height={20}
-                        className="absolute rounded-full bg-white eye w-fit  lg:top-[4.2rem] z-[999] lg:left-[11.7rem] top-[4rem] left-[11.8rem]"
+                        className="absolute rounded-full bg-white eye w-fit  lg:top-[4.2rem] z-[999] lg:left-[11.7rem] top-[4.3rem] left-[11.8rem]"
 
                     />
                     <Image 
