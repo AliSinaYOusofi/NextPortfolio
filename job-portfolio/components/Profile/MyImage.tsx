@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Image from 'next/image';
 import React from 'react'
 import me from  "../../public/cropped-1366-768-642540.png";
-import eye from "../../public/white.PNG";
+import eye from '../../public/white.jpg';
 
 const MyImage: NextPage = () => {
 
