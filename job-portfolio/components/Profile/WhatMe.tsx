@@ -20,7 +20,7 @@ const WhatMe: NextPage = () => {
     let four = React.useRef<HTMLDivElement>(null);
 
     // blur the first one
-    const blueOne = () : void => {
+    const blueOne = ()  => {
         if( two.current && three.current && four.current) {
             two.current.style.filter="blur(1px)";
             four.current.style.filter="blur(1px)";
@@ -28,7 +28,7 @@ const WhatMe: NextPage = () => {
         }
     }
     // another function for making it the back way
-    const undoBlurOne = () : void => {
+    const undoBlurOne = () => {
         if (two.current && three.current && four.current) {
             two.current.style.filter="blur(0)";
             three.current.style.filter="blur(0)";
@@ -37,7 +37,7 @@ const WhatMe: NextPage = () => {
     }
     // for the third elemnt
 
-    const blurTwo = () : void => {
+    const blurTwo = ()  => {
         if (one.current && three.current && four.current) {
             three.current.style.filter="blur(1px)";
             one.current.style.filter="blur(1px)";
@@ -45,7 +45,7 @@ const WhatMe: NextPage = () => {
         }
     }
 
-    const undoBlurTwo = () : void => {
+    const undoBlurTwo = ()  => {
         if (one.current && two.current && three.current && four.current) {
             three.current.style.filter="blur(0px)";
             one.current.style.filter="blur(0px)";
@@ -103,7 +103,8 @@ const WhatMe: NextPage = () => {
             {/* <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200 mt-2"> {text} </h3> */}
            
                     <h5 className="text-xl">
-                    <span className="web__dev" style={{"--i": 1}}>&lt;</span>
+                    <span className="web__dev" style={{"--i": "3"}}>&lt;</span>
+                    
                     <span className="web__dev" style={{"--i": 2}}>F</span>
                     <span className="web__dev" style={{"--i": 3}}>U</span>
                     <span className="web__dev" style={{"--i": 4}}>L</span>
