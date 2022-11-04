@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import Image from 'next/image';
 import React from 'react'
 import me from  "../../public/cropped-1366-768-642540.png";
-import eye from '../../public/white.PNG';
+import eye from "../../public/white.PNG";
 
 const MyImage: NextPage = () => {
 
@@ -37,11 +37,11 @@ const MyImage: NextPage = () => {
         
             const angleDeg = getAngle(mouseX, mouseY, anchorX, anchorY);
             
-            const eyes : NodeList | HTMLDivElement | Array<NodeList> = document.querySelectorAll(".eye")
+            const eyes  = document.querySelectorAll<HTMLElement>(".eye")
     
             eyes.forEach(eye => {
               (eye.style as CSSStyleDeclaration).transform = `rotate(${angleDeg + 90}deg)`; // did not work becuase of a semicolon
-              rabbit.style.filter = `hue-rotate(${angleDeg -30}deg)`;
+              (rabbit as HTMLImageElement).style.filter = `hue-rotate(${angleDeg -30}deg)`;
             })
           });
         }

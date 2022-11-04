@@ -7,9 +7,9 @@ const MenuList: NextPage = () => {
     const [clicked, setClicked] = React.useState(false);
     // making it close when clicked using userRef()
     // for refs for doing it
-    let rightLine  = React.useRef<HTMLDivElement | null>();
-    let leftLine = React.useRef<HTMLDivElement>();
-    let middleLine  = React.useRef<HTMLDivElement>();
+    let rightLine  = React.useRef<HTMLDivElement | null>(null);
+    let leftLine = React.useRef<HTMLDivElement>(null);
+    let middleLine  = React.useRef<HTMLDivElement>(null);
 
     const showCross = () : void => {
         
