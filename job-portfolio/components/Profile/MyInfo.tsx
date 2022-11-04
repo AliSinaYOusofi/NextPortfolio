@@ -106,7 +106,7 @@ const MyInfo : NextPage = () => {
                 </div>
                 <div className="flex flex-col items-start justify-start">
                     <p className="text-sm text-gray-400 font-bold">Email</p>
-                    <h4 className="-mt-1 text-white font-semibold">tinayousofi@gmail.com</h4>
+                    <h4 className="-mt-1 text-white font-semibold lg:text-base md:text-xs">tinayousofi@gmail.com</h4>
                 </div>
             </div>
             <div> <hr /></div>
