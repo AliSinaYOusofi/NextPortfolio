@@ -104,23 +104,23 @@ const WhatMe: NextPage = () => {
            
                     <h5 className="text-xl">
                     <span className="web__dev" style={{"--i": "3"}}>&lt;</span>
-                    
-                    <span className="web__dev" style={{"--i": 2}}>F</span>
-                    <span className="web__dev" style={{"--i": 3}}>U</span>
-                    <span className="web__dev" style={{"--i": 4}}>L</span>
-                    <span className="web__dev" style={{"--i": 5}}>L</span>
-                    <span className="web__dev" style={{"--i": 6}}>-</span>
-                    <span className="web__dev" style={{"--i": 7}}>S</span>
-                    <span className="web__dev" style={{"--i": 8}}>T</span>
-                    <span className="web__dev" style={{"--i": 9}}>A</span>
-                    <span className="web__dev" style={{"--i": 10}}>C</span>
-                    <span className="web__dev" style={{"--i": 11}}>K</span>
-                    <span className="web__dev" style={{"--i": 12}}>-</span>
-                    <span className="web__dev" style={{"--i": 13}}>D</span>
-                    <span className="web__dev" style={{"--i": 14}}>E</span>
-                    <span className="web__dev" style={{"--i": 15}}>V</span>
-                    <span className="web__dev" style={{"--i": 16}}>/</span>
-                    <span className="web__dev" style={{"--i": 17}}>&gt;</span>
+
+                    <span className="web__dev" >F</span>
+                    <span className="web__dev" >U</span>
+                    <span className="web__dev">L</span>
+                    <span className="web__dev">L</span>
+                    <span className="web__dev">-</span>
+                    <span className="web__dev">S</span>
+                    <span className="web__dev">T</span>
+                    <span className="web__dev">A</span>
+                    <span className="web__dev" >C</span>
+                    <span className="web__dev" >K</span>
+                    <span className="web__dev" >-</span>
+                    <span className="web__dev">D</span>
+                    <span className="web__dev" >E</span>
+                    <span className="web__dev" >V</span>
+                    <span className="web__dev" >/</span>
+                    <span className="web__dev" >&gt;</span>
                 </h5>
             <div className="flex gap-x-2 text-2xl mt-3">
                 <div ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne} className="icon1 transition-all duration-300  bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsFacebook /> </div>
