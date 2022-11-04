@@ -103,7 +103,7 @@ const WhatMe: NextPage = () => {
             {/* <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200 mt-2"> {text} </h3> */}
            
                     <h5 className="text-xl">
-                    <span className="web__dev" style={{"--i": "3"}}>&lt;</span>
+                    <span className="web__dev">&lt;</span>
 
                     <span className="web__dev" >F</span>
                     <span className="web__dev" >U</span>
