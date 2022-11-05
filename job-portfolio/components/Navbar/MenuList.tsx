@@ -37,7 +37,7 @@ const MenuList: NextPage = () => {
     // this to be done tommorow and other sections as well
 
     return (
-        <div className="md:hidden cursor-pointer">
+        <div className="md:hidden cursor-pointer md:mt-10 mt-3">
             <div className="mr-10 md:mr-20 space-y-2 transition-all duration-300" onClick={showCross}>
                 <div id="one" ref={rightLine} className="w-8 h-0.5 bg-gray-600 transition-all duration-300"></div>
                 <div ref={middleLine} className="w-8 h-0.5 bg-gray-600 transition-all duration-300"></div>
