@@ -1,8 +1,12 @@
 import { time } from 'console';
 import { NextPage } from 'next'
+import Link from 'next/link';
 import { resolve } from 'path';
 import React from 'react'
 import {BsDownload, BsFacebook, BsTwitter, BsDribbble, BsWhatsapp} from 'react-icons/bs';
+import { toast, ToastContainer } from 'react-toastify';
+// god damn this linke of code took 20 minutes to sovle it;
+import 'react-toastify/dist/ReactToastify.css';
 
 const WhatMe: NextPage = () => {
     
@@ -97,7 +101,17 @@ const WhatMe: NextPage = () => {
     
     
     // type for the animation of letters in i
+
+    // showing toasts on click for emtpy links
+    const facebookError = () : void => {
+        toast.info(<h1>&#128531; I&apos;m not on facebook</h1>)
+    }
+
+    const twitterAccount = () : void => {
+       
+    }
     return (
+        <>
         <div className="mt-4">
             <h1 className="font-bold tracking-widest text-xl"> Ali Sina Yousofi </h1>
             {/* <h3 className="px-1 py-1 bg-[#1a1919] w-fit rounded-sm  text-gray-200 mt-2"> {text} </h3> */}
@@ -123,12 +137,25 @@ const WhatMe: NextPage = () => {
                     <span className="web__dev" >&gt;</span>
                 </h5>
             <div className="flex gap-x-2 text-2xl mt-3">
-                <div ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne} className="icon1 transition-all duration-300  bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsFacebook /> </div>
-                <div  ref={two} onMouseEnter={blurTwo} onMouseLeave={undoBlurTwo} className="icon2 face transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsTwitter /></div>
-                <div ref={three} onMouseEnter={blurThree} onMouseLeave={undoBlurThree}  className="icon3 transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400 rounded-md"> <BsDribbble /> </div>
-                <div ref ={four} onMouseEnter={blurFour} onMouseLeave={undoBlurFour}  className="icon4 transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsWhatsapp /> </div>
+                <div onClick={facebookError} ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne} className="icon1 transition-all duration-300  bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsFacebook /> </div>
+                <Link target="_blank" href="https://twitter.com/shreddedDev"> <div onClick={twitterAccount}  ref={two} onMouseEnter={blurTwo} onMouseLeave={undoBlurTwo} className="icon2 face transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsTwitter /></div></Link>
+                <Link target="_blank" href="https://t.me/sinayousofi"><div ref={three} onMouseEnter={blurThree} onMouseLeave={undoBlurThree}  className="icon3 transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400 rounded-md"> <BsDribbble /> </div></Link>
+                <Link target="_blank" href="https://wa.me/93731055068?text=Hello%2C%20I%20have%20a%20project%20to%20work%20on%20together."> <div ref ={four} onMouseEnter={blurFour} onMouseLeave={undoBlurFour}  className="icon4 transition-all duration-300 bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsWhatsapp /> </div></Link>
             </div>
+            
         </div>
+        <ToastContainer 
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"/>
+        </>
     )
 }
 
