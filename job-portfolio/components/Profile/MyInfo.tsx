@@ -3,6 +3,7 @@ import React from 'react';
 import {AiOutlinePhone, AiOutlineMail, } from 'react-icons/ai';
 import {GoLocation} from 'react-icons/go';
 import {BsFillCalendarDateFill} from 'react-icons/bs';
+import Link from 'next/link';
 
 
 const MyInfo : NextPage = () => {
@@ -110,10 +111,11 @@ const MyInfo : NextPage = () => {
                     transition-all duration-300 bg-gradient-to-b from-black/30 opacity-40 group-hover:opacity-100 hover:from-black/60">
                     <AiOutlineMail size={30}/>
                 </div>
-                <div className="flex flex-col items-start justify-start">
+                <Link href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@example.com" target="_blank" className="cursor-pointer">
+                    <div className="flex flex-col items-start justify-start">
                     <p className="text-sm text-gray-400 font-bold">Email</p>
                     <h4 className="-mt-1 text-white font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofi@gmail.com</h4>
-                </div>
+                </div></Link>
             </div>
             <div> <hr /></div>
             <div className="three flex justify-start items-center gap-x-3 group transition-all duration-300" ref={three} onMouseEnter={blurThree} onMouseLeave={undoBlurThree}> 
