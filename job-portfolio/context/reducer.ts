@@ -1,7 +1,7 @@
 import React from "react";
 
 export const initialThem = {
-    theme: "dark"
+    theme: true // false indicates light theme
 }
 
 function reducer(state : object | any, action : object | any) : any {
