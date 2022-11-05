@@ -5,8 +5,8 @@ import Link from "next/link";
 const Footer : NextPage = () => {
     return (
         <footer className="text-center bg-black/40 w-[80%] ml-auto mr-auto md:w-[80%] rounded-lg text-white mt-10 h-fit">
-            <div className="container px-6 pt-6">
-                <div className="flex justify-evenly mb-6">
+            <div className="container md:px-6 md:pt-6 py-2">
+                <div className="flex justify-evenly md:mb-6">
                 
 
                 <Link target="_blank" href="https://twitter.com/shreddedDev" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
