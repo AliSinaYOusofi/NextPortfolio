@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/About/SkillsCard.tsx", "components/Profile/WhatMe.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/About/SkillsCard.tsx", "components/Profile/WhatMe.tsx", "components/Contact.tsx/Contarct.tsx"],
   "exclude": ["node_modules"]
 }
