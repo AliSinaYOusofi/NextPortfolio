@@ -6,6 +6,11 @@
 
 html {
   font-family: "Fira Code";
+  scroll-behavior: smooth;
+}
+
+body {
+  
 }
 
 

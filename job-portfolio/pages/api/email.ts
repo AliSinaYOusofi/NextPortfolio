@@ -29,8 +29,7 @@ function runMiddleware(
 export default async function handler( req: NextApiRequest, res: NextApiResponse<any>) 
 {
     const {email, subject, description} = req.body;
-    console.log(description, subject, email);
-    await runMiddleware(req, res, cors);
+    
     // should work here now
   
     let flag = true;
@@ -70,4 +69,3 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
     
     flag ? res.status(200).json({message: "done"}) : res.status(501).json({message: "failed"});
 }
-
