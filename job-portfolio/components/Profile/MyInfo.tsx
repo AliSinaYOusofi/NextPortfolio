@@ -4,6 +4,7 @@ import {AiOutlinePhone, AiOutlineMail, } from 'react-icons/ai';
 import {GoLocation} from 'react-icons/go';
 import {BsFillCalendarDateFill} from 'react-icons/bs';
 
+
 const MyInfo : NextPage = () => {
 
     let one = React.useRef<HTMLDivElement>(null);
@@ -13,11 +14,14 @@ const MyInfo : NextPage = () => {
 
     // blur the first one
     const blueOne = () : void => {
+        
         if( two.current && three.current && four.current) {
             two.current.style.filter="blur(1px)";
             four.current.style.filter="blur(1px)";
             three.current.style.filter="blur(1px)";
         }
+        // show toast
+        
     }
     // another function for making it the back way
     const undoBlurOne = () : void => {
@@ -80,6 +84,8 @@ const MyInfo : NextPage = () => {
         }
     }
 
+
+    
     return (
         <div className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
         rounded-md parent py-8 px-4
