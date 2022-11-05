@@ -13,15 +13,42 @@ const Contact : NextPage = () => {
     const [description, setDescription] = React.useState("");
 
 
+    // an sleep(ms)
+
+    const sleepFor = () : Promise<void> => {
+        return new Promise(resolve => setTimeout(resolve, 1000));
+    }
+
     const handleSendEmail = async () : Promise<void> => {
         const response = await axios.post("/api/email", {
             email,
             subject, 
             description
         });
-        console.log(response.data);
-        response.data.message === 'done' ? toast.success("sent") : toast.error("failed")
+        
+        response.data.message === 'done' ? toast.promise(sleepFor, {
+            // pending: <h1>&#128530; sending email ... </h1>,
+            // success: <h1>&#128513; email sent</h1>,
+            // error: <h1>&#128545;failed to send email</h1>
+            pending: {
+                render() {
+                    return <h1>&#128530; sending email ... </h1>
+                }
+            },
+            success: {
+                render() {
+                    return <h1>&#128513; email sent</h1>
+                }
+            },
+            error: {
+                render() {
+                    return <h1>&#128545;failed to send email</h1>
+                }
+            }
+        }) : toast.error("failed")
     }
+
+
     return(
         <section className="mt-10">
             <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
