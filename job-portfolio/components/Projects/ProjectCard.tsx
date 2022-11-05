@@ -23,9 +23,9 @@ const ProjectCards : NextPage<Props> = (props) => {
             
             <div className="p-5 absolute md:top-[25%] md:mt-2 -mt-10 top-[20%] opacity-0 transition-all duration-300
                 group-hover:-mt-7 group-hover:opacity-[100]">
-                <a href="#">
+                <p>
                     <h5 className="mb-2 text-xs md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.name}</h5>
-                </a>
+                </p>
                 <p className="mb-3 md:text-xl text-xs font-normal text-[#c0b9b4]">{props.details}</p>
                 
                 <Link href={props.link} target="_blank">

@@ -18,6 +18,20 @@ const MenuItem: NextPage<Props> = (props) => {
 
     const handleMenuClick = () : void => { setMenu(previous => !previous); }
 
+    const goToMainPage = () : void => {
+        document.getElementById("dark")?.scrollIntoView()
+    }
+
+    const goToAbout = () : void => {
+        document.getElementById("about")?.scrollIntoView()
+    }
+    const goToProjects = () : void => {
+        // now i should make it for every device
+        document.getElementById("projects")?.scrollIntoView()
+    }
+    const goToContact= () : void => {
+        document.getElementById("contact")?.scrollIntoView()
+    }
     return(
         <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%"}} className="menus hidden md:flex flex-row-reverse 
         bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
@@ -27,25 +41,25 @@ const MenuItem: NextPage<Props> = (props) => {
             {
                 menu ?
                 <>
-                    <div className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
-                    bg-[#1a2027] z-10  lg:p-2 p-1 rounded-lg cursor-pointer">
-                        <div className="flex items-center justify-center"><CgProfile /></div>
-                        <p className="text-sm md:text-xl">About</p>
-                    </div>
-            
-                    <div className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
+                    <div onClick={goToContact} className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
                     bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer">
                         <div className="flex items-center justify-center  text-gray-400"><RiContactsLine /></div>
                         <p className="text-sm md:text-xl">Contact</p>
                     </div>
             
-                    <div className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
+                    <div onClick={goToProjects} className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
                     bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer">
                         <div className="flex items-center justify-center"><AiFillProject /></div>
                         <p className="text-sm md:text-xl">Projects</p>
                     </div>
-            
-                    <div className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
+
+                    <div onClick={goToAbout} className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
+                    bg-[#1a2027] z-10  lg:p-2 p-1 rounded-lg cursor-pointer">
+                        <div className="flex items-center justify-center"><CgProfile /></div>
+                        <p className="text-sm md:text-xl">About</p>
+                    </div>
+                
+                    <div onClick={goToMainPage} className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
                     bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer">
                         <div className="flex items-center justify-center"><AiOutlineHome /></div>
                         <p className="text-sm md:text-xl">Home</p>
