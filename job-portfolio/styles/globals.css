@@ -187,9 +187,9 @@ good that i added this effect
 /* styling the cursor */
 
 .skills:hover {
-  background: #1a2027;
-  box-shadow:  4px 4px 15px #171b20,
-               -4px -4px 15px #090b0e;
+  background: #0A101D;
+  box-shadow:  4px 4px 10px #0a101d,
+               4px 4px 10px #0f172a;
 
 }
 
@@ -217,7 +217,7 @@ good that i added this effect
 .menu:before {
   content: '';
   /* background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); */
-  background: linear-gradient(45deg, #0D324D, #7F5A83);
+  background: linear-gradient(45deg, #0D324D, #0A101D);
   position: absolute;
   top: -2px;
   left:-2px;

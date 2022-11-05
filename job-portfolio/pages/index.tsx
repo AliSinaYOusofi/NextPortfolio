@@ -27,7 +27,7 @@ const Main = dynamic( () => import ("../components/Main"), {ssr: true});
 export default function Home() {
   const [{theme}] = useThemeProvider(); // getting the current theme
   return (
-    <div style={{background: !theme ? "#0F172A": "white"}}>
+    <div style={{background: !theme ? "#060A11": "white"}}>
       <Head>
         <title>Ali Sina</title>
         <meta name="description" content="npm" />
