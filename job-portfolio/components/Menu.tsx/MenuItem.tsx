@@ -40,7 +40,10 @@ const MenuItem: NextPage<Props> = (props) => {
     // checking context
     console.log(theme);
     return(
-        <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%", backgroundColor: theme ? "#0A101D" : "white"}} className="menus hidden md:flex flex-row-reverse 
+        <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%", 
+        backgroundColor: theme ? "#0A101D" : "#FFFADA",
+        color: theme ? "gray" : "white"
+    }} className="menus hidden md:flex flex-row-reverse 
         bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
         right-[0%] top-[88%]  w-fit md:right-[10%] lg:right-[25%]
         justify-center items-center p-3  text-sm md:text-2xl lg:p-3 rounded-md md:gap-x-10 
@@ -50,25 +53,29 @@ const MenuItem: NextPage<Props> = (props) => {
                 menu ?
                 <>
                     <div onClick={goToContact} className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
-                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer">
-                        <div className="flex items-center justify-center  text-gray-400"><RiContactsLine /></div>
+                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer"
+                    style={{color: theme ? "gray" : "white"}}>
+                        <div className="flex items-center justify-center"><RiContactsLine /></div>
                         <p className="text-sm md:text-xl">Contact</p>
                     </div>
             
                     <div onClick={goToProjects} className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
-                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer">
+                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer"
+                    style={{color: theme ? "gray" : "white"}}>
                         <div className="flex items-center justify-center"><AiFillProject /></div>
                         <p className="text-sm md:text-xl">Projects</p>
                     </div>
 
                     <div onClick={goToAbout} className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
-                    bg-[#1a2027] z-10  lg:p-2 p-1 rounded-lg cursor-pointer">
+                    bg-[#1a2027] z-10  lg:p-2 p-1 rounded-lg cursor-pointer"
+                    style={{color: theme ? "gray" : "white"}}>
                         <div className="flex items-center justify-center"><CgProfile /></div>
                         <p className="text-sm md:text-xl">About</p>
                     </div>
                 
                     <div onClick={goToMainPage} className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
-                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer">
+                     lg:p-2 p-1 rounded-lg cursor-pointer"
+                    style={{color: theme ? "gray" : "white"}}>
                         <div className="flex items-center justify-center"><AiOutlineHome /></div>
                         <p className="text-sm md:text-xl">Home</p>
                     </div>
@@ -76,7 +83,7 @@ const MenuItem: NextPage<Props> = (props) => {
             : ""
             }
 
-            <div onClick={handleMenuClick} className="cursor-pointer transition-all duration-300 
+            <div style={{color: theme ? "gray" : "white"}} onClick={handleMenuClick} className="cursor-pointer transition-all duration-300 
             bg-black/30 rounded-full p-2 menu">
                 {
                     menu 
