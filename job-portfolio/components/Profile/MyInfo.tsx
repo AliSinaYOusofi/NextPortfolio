@@ -91,7 +91,7 @@ const MyInfo : NextPage = () => {
 
     
     return (
-        <div style={{backgroundColor: theme ? "#0A101D" : "white", color: !theme ? "gray" : "seashell"}} className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
+        <div style={{backgroundColor: theme ? "" : "white", color: !theme ? "black" : "seashell"}} className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
         rounded-md parent py-8 px-4
         ">
             <div className="one flex justify-start items-center gap-x-3 group transition-all duration-300" ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne}> 
@@ -136,7 +136,7 @@ const MyInfo : NextPage = () => {
             <div className="four flex justify-start items-center gap-x-3 group transition-all duration-300" ref={four} onMouseEnter={blurFour} onMouseLeave={undoBlurFour}> 
                 <div className="p-1 rounded-lg
                     transition-all duration-300 bg-gradient-to-b from-black/30 opacity-40 group-hover:opacity-100 hover:from-black/60">
-                    <GoLocation size={30}/>
+                    <GoLocation style={{color: theme ? "" : "black"}} size={30}/>
                 </div>
                 <div className="flex flex-col items-start justify-start">
                     <p className="text-sm text-gray-400 font-bold">Location</p>
@@ -144,7 +144,6 @@ const MyInfo : NextPage = () => {
                 </div>
             </div>
                 <hr />
-            
         </div>
     );
 };

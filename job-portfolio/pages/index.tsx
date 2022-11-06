@@ -8,10 +8,9 @@ import Script from "next/script";
 
 // import AllTesimonies from "../components/Testimonials/AllTesimonies";
 
-// importing our context
-import { StateProvider, useThemeProvider } from "../context/ThemeProvider";
-import reducer, {initialThem} from "../context/reducer"; // our reducer function
+
 import dynamic from "next/dynamic";
+import { useThemeProvider } from "../context/ThemeProvider";
 
 
 // importing dynamic avoiding ssr
@@ -31,13 +30,13 @@ export default function Home() {
   console.log(theme, "current themein index");
   //
   return (
-    <div id="main">
+    <div style={{backgroundColor: theme ? "#060A11" : "#FBFAF2"}} id="main">
       <Head>
         <title>Ali Sina</title>
         <meta name="description" content="npm" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <StateProvider reducer={reducer} initialTheme={initialThem} >
+      
         <Navbar />
         <MenuItem show={false}/>
         <Main />
@@ -45,7 +44,7 @@ export default function Home() {
         <Projects />
         <Contact />
         <Footer /> 
-      </StateProvider>
+      
     </div>
   );
 }
