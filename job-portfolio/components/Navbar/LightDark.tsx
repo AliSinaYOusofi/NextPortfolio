@@ -1,21 +1,27 @@
 import { NextPage } from 'next';
 import React from 'react'
 import {CiLight, CiDark} from 'react-icons/ci';
+import { useThemeProvider } from '../../context/ThemeProvider';
 
 
 const LightDark: NextPage = () => {
 
-    const [theme, setTheme] = React.useState(false);
+    const [{theme}, dispatch] = useThemeProvider();
+
+    const [currentTheme, setCurrentTheme] = React.useState(false);
     const [html, setHTML] = React.useState();
     // using useRef() to give that fade transition
     
     // handle the theme click. change it 
     const handleThemeClick = (e : any)  => { 
         e.preventDefault();
-        setTheme(previouseTheme => !previouseTheme);
+        setCurrentTheme(previouseTheme => !previouseTheme);
         
         let target = (e.target as Element);
-        target.classList.toggle("fade2");   
+        target.classList.toggle("fade2");
+        
+        dispatch({type: "set_theme", currentTheme});
+        
     }
     
     
@@ -28,7 +34,7 @@ const LightDark: NextPage = () => {
              md:mt-10 mt-3" 
             onClick={handleThemeClick}>
             {
-                theme ? <CiDark   className="fade2 text-black md:text-xl text-md transition-all duration-300 z-10" /> : <CiLight  className="text-black md:text-xl text-md transition-all duration-300 fade2"  />
+                currentTheme ? <CiDark   className="fade2 text-black md:text-xl text-md transition-all duration-300 z-10" /> : <CiLight  className="text-black md:text-xl text-md transition-all duration-300 fade2"  />
             }
         </div>
     )
