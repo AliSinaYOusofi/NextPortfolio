@@ -14,12 +14,7 @@ const WhatMe: NextPage = () => {
     const [{theme}] = useThemeProvider();
 
     let typing: string[] = ["isTyping", "isDeleting"];
-    // styling the text
-    const [text, setText] = React.useState("");
-    // for tpyewriter effect
-    const [isTyping, setTyping] = React.useState(typing[0])
-    // using refs to fucking select previous siblings 
-    // i tried to do it the css way but failed to do.
+    
 
     let one = React.useRef<HTMLDivElement>(null);
     let two = React.useRef<HTMLDivElement>(null);
@@ -107,13 +102,8 @@ const WhatMe: NextPage = () => {
 
     // showing toasts on click for emtpy links
     const facebookError = () : void => {
-        toast.info(<h1>&#128531; I&apos;m not on facebook</h1>)
+        toast.info(<h1>&#128531; I&apos;m not on facebook</h1>, { theme: theme ? "dark" : "light"})
     }
-
-    const twitterAccount = () : void => {
-       
-    }
-
     
     return (
         <>
@@ -143,9 +133,9 @@ const WhatMe: NextPage = () => {
                 </h5>
             <div className="flex gap-x-2 text-2xl mt-3">
                 <div style={{backgroundColor: theme ? "#060A11" : "white"}} onClick={facebookError} ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne} className="icon1 transition-all duration-300  bg-[#1D1D1D] p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsFacebook /> </div>
-                <Link style={{backgroundColor: theme ? "#060A11" : "white"}} target="_blank" href="https://twitter.com/shreddedDev" className="rounded-md"> <div onClick={twitterAccount}  ref={two} onMouseEnter={blurTwo} onMouseLeave={undoBlurTwo} className="icon2 face transition-all duration-300  p-2 cursor-pointer   rounded-md"> <BsTwitter /></div></Link>
+                <Link style={{backgroundColor: theme ? "#060A11" : "white"}} target="_blank" href="https://twitter.com/shreddedDev" className="rounded-md"> <div   ref={two} onMouseEnter={blurTwo} onMouseLeave={undoBlurTwo} className="icon2 face transition-all duration-300  p-2 cursor-pointer   rounded-md"> <BsTwitter /></div></Link>
                 <Link style={{backgroundColor: theme ? "#060A11" : "white"}} target="_blank" href="https://t.me/sinayousofi" className="rounded-md"><div ref={three} onMouseEnter={blurThree} onMouseLeave={undoBlurThree}  className="icon3 transition-all duration-300  p-2 cursor-pointer  rounded-md"> <BsTelegram /> </div></Link>
-                <Link style={{backgroundColor: theme ? "#060A11" : "white"}} target="_blank" href="https://wa.me/93731055068?text=Hello%2C%20I%20have%20a%20project%20to%20work%20on%20together." className="rounded-md"> <div ref ={four} onMouseEnter={blurFour} onMouseLeave={undoBlurFour}  className="icon4 transition-all duration-300  p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsWhatsapp /> </div></Link>
+                <Link style={{backgroundColor: theme ? "#060A11" : "white"}} target="_blank" href="https://wa.me/93731055068?text=Hello%2C%20I%20have%20a%20project%20to%20work%20on%20together." className="rounded-md"> <div ref={four} onMouseEnter={blurFour} onMouseLeave={undoBlurFour}  className="icon4 transition-all duration-300  p-2 cursor-pointer after:bg-gray-400  rounded-md"> <BsWhatsapp /> </div></Link>
             </div>
             
         </div>

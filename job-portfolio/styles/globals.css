@@ -9,12 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  
-}
-
-
-
 /* p {
     font-weight: 500;
     text-transform: uppercase;
@@ -117,81 +111,7 @@ body {
     }
 }
 
-/*
-    making the icons hover and affect all siblings
-*/
 
-/* .one:hover ~ .two {
-    filter:blur(1px);
-}
-
-.one:hover ~ .three {
-    filter:blur(1px);
-}
-
-.one:hover ~ .four {
-    filter:blur(1px);
-} */
-
-/* this is for the waivy text 
-good that i added this effect
-*/
-
-.web__dev {
-  font-family: 'Alfa Slab One', cursive;
-  position: relative;
-  display: inline-block;
-  letter-spacing: 1px;;
-  text-transform: uppercase;
-  animation: waviy 1s infinite;
-  animation-delay: calc(.2s * var(--i));
-}
-
-@keyframes waviy {
-  0%,40%,100% {
-   
-    color: rgb(15, 14, 14);
-    opacity: 30;
-  }
-  20% {
-    transform: translateY(2px);
-    color: gray;
-    opacity: 100;
-  }
-}
-
-/* for the image effect */
-.no:hover {
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-  animation: shake 0.5s;
-  
-  /* When the animation is finished, start again */
-  animation-iteration-count: 1;
-}
-
-.no {
-  transition: all 0.4 ease-in-out;
-  
-}
-
-.no:hover {
-    background: #e0e0e0;
-    box-shadow:  4px 4px 20px darkslategray,
-                 -4px -4px 20px gray;
-}
-
-/* goes for the buttons */
-
-
-
-/* styling the cursor */
-
-.skills:hover {
-  background: #0A101D;
-  box-shadow:  4px 4px 10px #0a101d,
-               4px 4px 10px #0f172a;
-
-}
 
 /* styling the grid */
 .uppercase {
@@ -214,7 +134,7 @@ good that i added this effect
   border-radius: 10px;
 }
 
-.menu:before {
+.menu::before {
   content: '';
   /* background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000); */
   background: linear-gradient(45deg, #0D324D, #0A101D);
@@ -261,15 +181,3 @@ good that i added this effect
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
-
-
-/* @media(prefers-color-scheme: dark) {
-  #main {
-    background-color: #000;
-  }
-}
-@media(prefers-color-scheme: light) {
-  #main {
-    background-color: #000;
-  }
-} */
