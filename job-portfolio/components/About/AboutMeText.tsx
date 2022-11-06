@@ -1,9 +1,13 @@
 import { NextPage } from "next";
 import React from "react";
+import { useThemeProvider } from "../../context/ThemeProvider";
 
 const AboutMeText: NextPage = () => {
+
+    const [{theme}] = useThemeProvider(); // getting the current theme
+    
     return(
-        <div className="flex flex-col gap-y-3 text-white bg-black/40 py-2 px-2 rounded-lg">
+        <div style={{backgroundColor: theme ? "" : "white"}} className="flex flex-col gap-y-3 text-white bg-black/40 py-2 px-2 rounded-lg">
             <h1 className="font-bold tracking-wide md:text-3xl text-sm text-purple-400">function AboutMe() : <span className="text-yellow-500">string</span> </h1>
             <span className="font-bold tracking-wide text-xl md:text-3xl text-[#107c80]">&#123;</span>
             <p className="font-bold tracking-wide text-sm md:text-3xl text-purple-400 ml-10">return <span className="text-lime-500 md:text-2xl text-base">&ldquo;</span></p>

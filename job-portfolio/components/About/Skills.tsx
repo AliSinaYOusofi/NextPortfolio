@@ -8,11 +8,14 @@ import { SiExpress, SiTailwindcss } from 'react-icons/si';
 import {FaNodeJs, FaSass} from 'react-icons/fa';
 import {IoLogoJavascript} from 'react-icons/io';
 import {DiMongodb} from 'react-icons/di';
+import { useThemeProvider } from "../../context/ThemeProvider";
 
 const Skills: NextPage = () => {
 
+    const [{theme}] = useThemeProvider(); // getting the current theme
+
     return (
-        <div className="mt-10 text-white">
+        <div style={{backgroundColor: theme ? "" : "white"}} className="mt-10 text-white py-2 px-2 rounded-lg">
             <h1 className="font-extrabold text-2xl md:text-3xl mt-8"> <span className="text-purple-400">const</span> <span className="text-blue-400">Front-End = () : Skills =&gt;</span> &#123;&#125;</h1>
             
             <div className="mt-2 flex justify-between items-center flex-wrap  gap-y-3 md:gap-x-0 gap-x-1">

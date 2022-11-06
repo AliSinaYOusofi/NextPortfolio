@@ -4,9 +4,12 @@ import {AiOutlinePhone, AiOutlineMail, } from 'react-icons/ai';
 import {GoLocation} from 'react-icons/go';
 import {BsFillCalendarDateFill} from 'react-icons/bs';
 import Link from 'next/link';
+import { useThemeProvider } from '../../context/ThemeProvider';
 
 
 const MyInfo : NextPage = () => {
+    
+    const [{theme}] = useThemeProvider();
 
     let one = React.useRef<HTMLDivElement>(null);
     let two = React.useRef<HTMLDivElement>(null);
@@ -88,7 +91,7 @@ const MyInfo : NextPage = () => {
 
     
     return (
-        <div className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
+        <div style={{backgroundColor: theme ? "#0A101D" : "white", color: !theme ? "gray" : "seashell"}} className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
         rounded-md parent py-8 px-4
         ">
             <div className="one flex justify-start items-center gap-x-3 group transition-all duration-300" ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne}> 
@@ -100,8 +103,8 @@ const MyInfo : NextPage = () => {
                         
                 </div>
                 <div className="flex flex-col items-start justify-start">
-                    <p className="text-sm text-gray-400 font-bold">Phone</p>
-                    <h4 className="-mt-1 text-white font-semibold">+93731055068</h4>
+                    <p className="text-sm font-bold text-gray-400 ">Phone</p>
+                    <h4 className="-mt-1 font-semibold">+93731055068</h4>
                 </div>
                 
             </div>
@@ -113,8 +116,8 @@ const MyInfo : NextPage = () => {
                 </div>
                 <Link href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@example.com" target="_blank" className="cursor-pointer">
                     <div className="flex flex-col items-start justify-start">
-                    <p className="text-sm text-gray-400 font-bold">Email</p>
-                    <h4 className="-mt-1 text-white font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofi@gmail.com</h4>
+                    <p className="text-sm  font-bold text-gray-400 ">Email</p>
+                    <h4 className="-mt-1  font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofi@gmail.com</h4>
                 </div></Link>
             </div>
             <div> <hr /></div>
@@ -125,7 +128,7 @@ const MyInfo : NextPage = () => {
                 </div>
                 <div className="flex flex-col items-start justify-start">
                     <p className="text-sm text-gray-400 font-bold">BirthDay</p>
-                    <h4 className="-mt-1 text-white font-semibold">2 Oct, 1999</h4>
+                    <h4 className="-mt-1  font-semibold">2 Oct, 1999</h4>
                 </div>
             </div>
                 <hr />
@@ -137,7 +140,7 @@ const MyInfo : NextPage = () => {
                 </div>
                 <div className="flex flex-col items-start justify-start">
                     <p className="text-sm text-gray-400 font-bold">Location</p>
-                    <h4 className="-mt-1 text-white font-semibold">Kabul, Afghanistan</h4>
+                    <h4 className="-mt-1 font-semibold">Kabul, Afghanistan</h4>
                 </div>
             </div>
                 <hr />

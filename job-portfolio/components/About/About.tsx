@@ -10,7 +10,7 @@ const About : NextPage = () => {
 
     return (
         <>
-            <div style={{backgroundColor: theme ? "#0A101D" : "white"}} id={"about"} className=" mt-10 md:mr-4 md:mt-0 md:p-10 p-6 w-[90%] md:w-[100%] rounded-md  bg-black/30">
+            <div style={{backgroundColor: theme ? "#0A101D" : "#EDE4E0"}} id={"about"} className=" mt-10 md:mr-4 md:mt-0 md:p-10 p-6 w-[90%] md:w-[100%] rounded-md  bg-black/30">
                <AboutMeText />
                <Skills />
             </div>
