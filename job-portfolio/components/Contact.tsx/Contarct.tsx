@@ -76,7 +76,7 @@ const Contact: NextPage = () => {
 
     setLoading((previous) => !previous);
 
-    const response = await axios.put("/api/email", {
+    const response = await axios.post("/api/email", {
       email,
       subject,
       description,
