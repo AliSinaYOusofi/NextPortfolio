@@ -91,7 +91,9 @@ const MyInfo : NextPage = () => {
 
     
     return (
-        <div style={{backgroundColor: theme ? "" : "white", color: !theme ? "black" : "seashell"}} className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
+        <div style={{backgroundColor: theme ? "" : "white", color: !theme ? "black" : "seashell"
+            , boxShadow: theme ? "2px 2px 1px black" : "2px 2px 12px darkgray"}} 
+        className="w-[80%] bg-black/40 p-3 flex gap-y-3 flex-col mt-4
         rounded-md parent py-8 px-4
         ">
             <div className="one flex justify-start items-center gap-x-3 group transition-all duration-300" ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne}> 

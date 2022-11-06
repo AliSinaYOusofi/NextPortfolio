@@ -34,7 +34,7 @@ const LightDark: NextPage = () => {
              md:mt-10 mt-3" 
             onClick={handleThemeClick}
                 
-            style={{backgroundColor: !theme ? "#f4f3fb" : "white"}}>
+            style={{backgroundColor: !theme ? "#f4f3fb" : "white", boxShadow: theme ? "2px 2px 8px black" : "1px 2px 8px darkgray"}}>
             {
                 currentTheme ? <CiDark   className="fade2 text-black md:text-xl text-md transition-all duration-300 z-10" /> : <CiLight  className="text-black md:text-xl text-md transition-all duration-300 fade2"  />
             }

@@ -16,7 +16,8 @@ const Profile: NextPage = () => {
     return (
         <>
             {/* the image should show it here */}
-            <div style={{backgroundColor: theme ? "#060A11" : "#FBFAF2"}}  className="   flex flex-col justify-center top-0
+            <div style={{backgroundColor: theme ? "#060A11" : "#FBFAF2", }}  
+            className="   flex flex-col justify-center top-0
             items-center  rounded-md md:w-[40%] md:ml-3 w-[80%] h-fit relative md:sticky">
                 {/* // for image */}
                 <MyImage />
