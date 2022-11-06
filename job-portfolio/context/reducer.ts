@@ -8,7 +8,7 @@ function reducer(state : object | any, action : object | any) : any {
     switch(action.type) {
         case 'set_theme': {
             return {
-                ...state, theme: action.theme
+                ...state, theme: action.currentTheme
             }
         }
         default:

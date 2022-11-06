@@ -4,11 +4,14 @@ import {CgProfile} from 'react-icons/cg';
 import {AiFillProject, AiOutlineHome} from 'react-icons/ai';
 import {GrContactInfo} from 'react-icons/gr';
 import {RiContactsLine} from 'react-icons/ri';
+import { useThemeProvider } from "../../context/ThemeProvider";
 
 interface Props {
     show: boolean
 }
 const MenuItem: NextPage<Props> = (props) => {
+
+    const [{theme}] = useThemeProvider();
 
     // show the width should be zero but when clicked show all the items
     // or add a button to show and hide the menu
@@ -32,11 +35,16 @@ const MenuItem: NextPage<Props> = (props) => {
     const goToContact= () : void => {
         document.getElementById("contact")?.scrollIntoView()
     }
+
+    // z-[999] for mobiles it's just good #0A101D
+    // checking context
+    console.log(theme);
     return(
-        <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%"}} className="menus hidden md:flex flex-row-reverse 
+        <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%", backgroundColor: theme ? "#0A101D" : "white"}} className="menus hidden md:flex flex-row-reverse 
         bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
-        right-[0%] top-[88%] z-10 w-fit md:right-[10%] lg:right-[25%]
-        justify-center items-center p-3  text-sm md:text-2xl lg:p-3 rounded-md md:gap-x-10 gap-x-4  transition-all duration-300">
+        right-[0%] top-[88%]  w-fit md:right-[10%] lg:right-[25%]
+        justify-center items-center p-3  text-sm md:text-2xl lg:p-3 rounded-md md:gap-x-10 
+        gap-x-4  transition-all duration-300 z-[999]">
             
             {
                 menu ?
