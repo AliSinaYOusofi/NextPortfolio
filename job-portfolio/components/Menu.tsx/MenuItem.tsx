@@ -106,7 +106,7 @@ const MenuItem: NextPage<Props> = (props) => {
     return(
         <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%", 
         backgroundColor: theme ? "#0A101D" : "#f4f3fb",
-        color: theme ? "gray" : "white"
+        color: theme ? "gray" : "white", boxShadow: theme ? "2px 2px 8px black" : "1px 2px 18px darkgray"
     }} className="menus hidden md:flex flex-row-reverse 
         bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
         right-[0%] top-[88%]  w-fit md:right-[10%] lg:right-[25%]

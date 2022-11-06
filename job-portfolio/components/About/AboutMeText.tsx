@@ -7,7 +7,8 @@ const AboutMeText: NextPage = () => {
     const [{theme}] = useThemeProvider(); // getting the current theme
     
     return(
-        <div style={{backgroundColor: theme ? "" : "white"}} className="flex flex-col gap-y-3 text-white bg-black/40 md:py-12 md:px-2 p-2 rounded-lg">
+        <div style={{backgroundColor: theme ? "" : "white", boxShadow: theme ? "0 0 1px 1px black" : "1px 1px 12px darkgray"}} 
+            className="flex flex-col gap-y-3 text-white bg-black/40 md:py-12 md:px-2 p-2 rounded-lg">
             <h1 className="font-bold tracking-wide md:text-3xl text-xl text-purple-400 ml-5"> AboutMe </h1>
            
             <p style={{color: theme ? "" : "black"}} className="text-white ml-5 md:text-xl text-sm"> I am Creative Designer and Back-end developer from Kabul, 
