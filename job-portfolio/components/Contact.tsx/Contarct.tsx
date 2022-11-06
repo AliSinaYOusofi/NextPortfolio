@@ -49,15 +49,28 @@ const Contact: NextPage = () => {
   // make sure that they are a valid one.
   const validateMessage = (): boolean => {
     let flag: boolean = false;
+
+    // re for email
     if (email.length) {
       if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) flag = true;
-      else toast.error("input a valid email address.");
-    } else if (!email.length) toast.error("email address can't be empty");
-    else if (!description.length) toast.warning("provied a description.");
-    else toast.warning("provied a subject.");
+      else toast.error("input a valid email address.", { theme: theme ? "dark" : "light"});
+    }
+    // for every length
+    if (!email.length) {
+        toast.error("email address can't be empty", { theme: theme ? "dark" : "light"});
+        flag = false;
+    }
+    if (!description.length) {
+        toast.warning("provied a description.", { theme: theme ? "dark" : "light"});
+        flag = false;
+    }
+    if (!subject.length) {
+        toast.warning("provied a subject.", { theme: theme ? "dark" : "light"});
+        flag = false;
+    }
 
     return flag;
-  };
+  }
   const handleSendEmail = async (): Promise<void> => {
     if (!validateMessage()) return;
 
@@ -95,7 +108,9 @@ const Contact: NextPage = () => {
             },
           },
         },
-        {}
+        {
+            theme: theme ? "dark" : "light"
+        }
       );
     } else {
       toast.error("failed");
@@ -188,7 +203,7 @@ const Contact: NextPage = () => {
             style={{ color: theme ? "gray" : "white" }}
             onClick={handleSendEmail}
             type="button"
-            className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 menu rounded-lg py-3 px-5 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 sm:w-fit"
+            className=" menu rounded-lg py-3 px-5 text-center text-sm font-medium text-white  sm:w-fit"
           >
             {loading ? "Send message" : <Loading />}
           </button>

@@ -17,11 +17,15 @@ const SkillsCard: NextPage<Props> = (props) => {
     
     return (
         
-        <div style={{backgroundColor: theme ? "" : "white", color: !theme ? "gray" : "seashell"}} className=" p-4 bg-black/40 rounded-lg mt-3 w-[49%]
-        relative transition-all duration-300 skills">
+        <div style={{backgroundColor: theme ? "" : "white", 
+            color: !theme ? "gray" : "seashell",
+            }} 
+            className=" p-4 bg-black/40 rounded-lg mt-3 w-[49%]
+            relative transition-all duration-300"
+        >
             <div className="flex justify-between items-center">
                 {/* <props.icon /> */}
-                <h2 className=" textxl font-semibold">{props.header}</h2>
+                <h2 className=" textxl font-semibold">{props.header}</h2>   
                 <p className="text-4xl text-gray-500 object-cover rounded-full border-2 border-indigo-500">{props.icon}</p>
             </div>
             <div>

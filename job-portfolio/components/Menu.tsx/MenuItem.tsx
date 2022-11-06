@@ -21,72 +21,136 @@ const MenuItem: NextPage<Props> = (props) => {
 
     const handleMenuClick = () : void => { setMenu(previous => !previous); }
 
-    const goToMainPage = () : void => {
-        document.getElementById("dark")?.scrollIntoView()
+    const goToMainPage = () : void =>  document.getElementById("dark")?.scrollIntoView() 
+
+    const goToAbout = () : void => document.getElementById("about")?.scrollIntoView()
+    
+    const goToProjects = () : void => document.getElementById("projects")?.scrollIntoView()
+    
+    const goToContact= () : void => document.getElementById("contact")?.scrollIntoView()
+    
+
+    let one = React.useRef<HTMLDivElement>(null);
+    let two = React.useRef<HTMLDivElement>(null);
+    let three = React.useRef<HTMLDivElement>(null);
+    let four = React.useRef<HTMLDivElement>(null);
+
+    // for bluring the icons
+    const blueOne = ()  => {
+        if( two.current && three.current && four.current) {
+            two.current.style.filter="blur(1px)";
+            four.current.style.filter="blur(1px)";
+            three.current.style.filter="blur(1px)";
+        }
+    }
+    // another function for making it the back way
+    const undoBlurOne = () => {
+        if (two.current && three.current && four.current) {
+            two.current.style.filter="blur(0)";
+            three.current.style.filter="blur(0)";
+            four.current.style.filter="blur(0)";
+        }
+    }
+    // for the third elemnt
+
+    const blurTwo = ()  => {
+        if (one.current && three.current && four.current) {
+            three.current.style.filter="blur(1px)";
+            one.current.style.filter="blur(1px)";
+            four.current.style.filter="blur(1px)";
+        }
     }
 
-    const goToAbout = () : void => {
-        document.getElementById("about")?.scrollIntoView()
-    }
-    const goToProjects = () : void => {
-        // now i should make it for every device
-        document.getElementById("projects")?.scrollIntoView()
-    }
-    const goToContact= () : void => {
-        document.getElementById("contact")?.scrollIntoView()
+    const undoBlurTwo = ()  => {
+        if (one.current && two.current && three.current && four.current) {
+            three.current.style.filter="blur(0px)";
+            one.current.style.filter="blur(0px)";
+            four.current.style.filter="blur(0px)";
+        }
     }
 
-    // z-[999] for mobiles it's just good #0A101D
-    // checking context
-    console.log(theme);
+    // for the third element
+    const blurThree = () : void => {
+        if (one.current && two.current && four.current) {
+            one.current.style.filter="blur(1px)";
+            two.current.style.filter="blur(1px)";
+            four.current.style.filter="blur(1px)";
+        }
+    }
+
+    const undoBlurThree = () : void => {
+        if (one.current && two.current && four.current) {
+            one.current.style.filter="blur(0)";
+            two.current.style.filter="blur(0)";
+            four.current.style.filter="blur(0)";
+        }
+    }
+
+    // and for the fourth icon
+
+    const blurFour = () : void => {
+        if (one.current && two.current && three.current) {
+            one.current.style.filter="blur(1px)";
+            two.current.style.filter="blur(1px)";
+            three.current.style.filter="blur(1px)";
+        }
+    }
+
+    const undoBlurFour = () : void => {
+        if (one.current && two.current && three.current) {
+            one.current.style.filter="blur(0)";
+            two.current.style.filter="blur(0)";
+            three.current.style.filter="blur(0)";
+        }
+    }
     return(
         <div style={{display: props.show ? "flex" : "hidden", borderRadius: menu ? "" : "50%", right: menu ? "" : "50%", 
-        backgroundColor: theme ? "#0A101D" : "#FFFADA",
+        backgroundColor: theme ? "#0A101D" : "#f4f3fb",
         color: theme ? "gray" : "white"
     }} className="menus hidden md:flex flex-row-reverse 
         bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
         right-[0%] top-[88%]  w-fit md:right-[10%] lg:right-[25%]
         justify-center items-center p-3  text-sm md:text-2xl lg:p-3 rounded-md md:gap-x-10 
-        gap-x-4  transition-all duration-300 z-[999]">
+        gap-x-4  transition-all duration-300 z-[999] blur-[0.7px]
+        hover:blur-none">
             
-            {
-                menu ?
-                <>
-                    <div onClick={goToContact} className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
-                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer"
-                    style={{color: theme ? "gray" : "white"}}>
-                        <div className="flex items-center justify-center"><RiContactsLine /></div>
-                        <p className="text-sm md:text-xl">Contact</p>
-                    </div>
+        {
+            menu ?
+            <>
+                <div ref={four} onMouseEnter={blurFour} onMouseLeave={undoBlurFour} onClick={goToContact} className=" justify-center items-center flex-row gap-x-1 transition-all duration-300
+                 lg:p-2 p-1 rounded-lg cursor-pointer"
+                style={{color: theme ? "gray" : "black", backgroundColor: theme ? "#04060A" : "white",}}>
+                    
+                    <p className="text-sm md:text-xl flex items-center justify-center gap-x-1"><RiContactsLine />Contact</p>
+                </div>
+        
+                <div ref={three} onMouseEnter={blurThree} onMouseLeave={undoBlurThree} onClick={goToProjects} className=" justify-center items-center gap-x-1 flex-row transition-all duration-300
+                 lg:p-2 p-1 rounded-lg cursor-pointer"
+                style={{color: theme ? "gray" : "black" , backgroundColor: theme ? "#04060A" : "white"}}>
+                    
+                    <p className="text-sm md:text-xl flex items-center justify-center gap-x-1"><AiFillProject />Projects</p>
+                </div>
+
+                <div ref={two} onMouseEnter={blurTwo} onMouseLeave={undoBlurTwo} onClick={goToAbout} className=" justify-center items-center gap-x-1 flex-row transition-all duration-300
+                 z-10  lg:p-2 p-1 rounded-lg cursor-pointer"
+                style={{color: theme ? "gray" : "black" , backgroundColor: theme ? "#04060A" : "white"}}>
+                    
+                    <p className="text-sm md:text-xl flex items-center justify-center gap-x-1"><CgProfile />About</p>
+                </div>
             
-                    <div onClick={goToProjects} className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
-                    bg-[#1a2027] lg:p-2 p-1 rounded-lg cursor-pointer"
-                    style={{color: theme ? "gray" : "white"}}>
-                        <div className="flex items-center justify-center"><AiFillProject /></div>
-                        <p className="text-sm md:text-xl">Projects</p>
-                    </div>
+                <div ref={one} onMouseEnter={blueOne} onMouseLeave={undoBlurOne} onClick={goToMainPage} className=" justify-center items-center flex-row gap-x-1 transition-all duration-300
+                    lg:p-2 p-1 rounded-lg cursor-pointer"
+                style={{color: theme ? "gray" : "black", backgroundColor: theme ? "#04060A" : "white"}}>
+                    <p className="text-sm md:text-xl flex items-center justify-center gap-x-1"><AiOutlineHome />Home</p>
+                </div>
+            </>
+        : ""
+        }
 
-                    <div onClick={goToAbout} className="menu justify-center items-center gap-x-1 flex-row transition-all duration-300
-                    bg-[#1a2027] z-10  lg:p-2 p-1 rounded-lg cursor-pointer"
-                    style={{color: theme ? "gray" : "white"}}>
-                        <div className="flex items-center justify-center"><CgProfile /></div>
-                        <p className="text-sm md:text-xl">About</p>
-                    </div>
-                
-                    <div onClick={goToMainPage} className="menu justify-center items-center flex-row gap-x-1 transition-all duration-300
-                     lg:p-2 p-1 rounded-lg cursor-pointer"
-                    style={{color: theme ? "gray" : "white"}}>
-                        <div className="flex items-center justify-center"><AiOutlineHome /></div>
-                        <p className="text-sm md:text-xl">Home</p>
-                    </div>
-                </>
-            : ""
-            }
-
-            <div style={{color: theme ? "gray" : "white"}} onClick={handleMenuClick} className="cursor-pointer transition-all duration-300 
-            bg-black/30 rounded-full p-2 menu">
+            <div style={{color: theme ? "gray" : "black", backgroundColor: theme ? "#04060A" : "white",}} onClick={handleMenuClick} className="cursor-pointer transition-all duration-300 
+            bg-black/30 rounded-full p-2 ">
                 {
-                    menu 
+                    !menu 
                     ?
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
