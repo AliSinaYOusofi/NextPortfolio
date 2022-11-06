@@ -26,13 +26,15 @@ const LightDark: NextPage = () => {
     
     
     return (
-        <div id={"dark"} className="w-fit scroll-smooth md:p-4 p-2 relative bg-gray-400 backdrop backdrop-blur-lg rounded-full
-            cursor-pointer mr-10 md:mr-20 after:-z-10 after:bg-gray-500 after:absolute after:w-20 after:h-0
-            after:top-0 hover:scale-105 after:rounded-full after:-left-4 outline-none after:outline-none after:border-none after:backdrop-blur-lg 
+        <div id={"dark"} className="w-fit scroll-smooth md:p-4 p-2 relative backdrop backdrop-blur-lg rounded-full
+            cursor-pointer mr-10 md:mr-20 after:-z-10 after:bg-slate-900 after:absolute after:w-20 after:h-0
+            after:top-0 hover:scale-105 after:rounded-full after:-left-4 outline-none  
              hover:after:w-20 hover:after:h-28 after:transition-all after:duration-300 
-             overflow-hidden transition-all duration-300 hover:animate-none
+             overflow-hidden transition-all duration-300 border-none 
              md:mt-10 mt-3" 
-            onClick={handleThemeClick}>
+            onClick={handleThemeClick}
+            
+            style={{backgroundColor: theme ? "#0A101D" : "white"}}>
             {
                 currentTheme ? <CiDark   className="fade2 text-black md:text-xl text-md transition-all duration-300 z-10" /> : <CiLight  className="text-black md:text-xl text-md transition-all duration-300 fade2"  />
             }
