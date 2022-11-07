@@ -38,7 +38,7 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
 
     let transport = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
-    port: 2525,
+    port: 465,
     auth: {
         user: "cb4bcfb37d9f18",
         pass: "ce8aada5bf241e"
