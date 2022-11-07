@@ -83,7 +83,7 @@ const Contact: NextPage = () => {
     });
 
     // for loading icon
-
+    console.log(response.data);
     if (response.data.message === "done") {
       // set the loader
       toast.promise(
