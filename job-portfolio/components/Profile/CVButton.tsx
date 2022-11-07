@@ -8,7 +8,7 @@ const CVButton : NextPage = () => {
     return (
         <Link    href="https://github.com/AliSinaYOusofi" 
             target="_blank">
-            <button style={{backgroundColor: theme ? "#0A101D" : "white", 
+            <button style={{backgroundColor: theme ? "" : "", 
                 color: theme ? "" : "black", boxShadow: theme ? "2px 2px 4px black" : "1px 2px 8px darkgray"}}  
             type="button" 
                 className="  flex-row text-white  mt-3  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 mb-2 transition-all duration-300 group">
