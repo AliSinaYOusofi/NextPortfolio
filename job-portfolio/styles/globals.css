@@ -9,12 +9,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* p {
-    font-weight: 500;
+.p {
+    color: gray;
     text-transform: uppercase;
     background: rgb(10,10,23);
-    background: linear-gradient(90deg, rgba(10,10,23,1) 0%, rgba(10,10,10,1) 100%); 
-    letter-spacing: 5px;
+    background: linear-gradient(90deg, gray, darkgray 100%); 
+    
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -31,11 +31,11 @@ html {
     100% {
       background-position-x: 500%;
     }
-  } */
+  }
 
 
 /* for styling may name ALi SIna YOusofi in Name Comp*/
-.p{
+/* .p{
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
   
@@ -46,7 +46,7 @@ html {
     align-items: center;
     -webkit-justify-content: center;
     justify-content: center;
-   
+    box-shadow: 2px 2px 44px seashell;
     background: white;
     position: relative;
     background: transparent;
@@ -56,7 +56,8 @@ html {
 .p:before{
     content: "Ali Sina Yousofi";
     position: absolute;
-    background: linear-gradient(#f70000, #f89200, #f8f501, #038f00,#0168f8, #a200f7);
+    background: linear-gradient(darkgray, gray);
+    box-shadow: 2px 2px 14px seashell;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -65,7 +66,7 @@ html {
     clip-path: ellipse(120px 120px at -2.54% -9.25%);
     animation: swing 5s infinite;
     animation-direction: alternate;
-}
+} */
 
 @keyframes swing{
     0%{
@@ -181,3 +182,17 @@ html {
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+
+@media only screen and (max-width: 720px) {
+  .bitch {
+    right: 10%;
+    left: 10%
+  }
+} 
+@media only screen and (max-width: 500px) {
+  .bitch {
+    right: 0%;
+    left: 0%;
+  }
+} 
+  

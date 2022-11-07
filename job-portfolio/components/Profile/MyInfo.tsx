@@ -119,7 +119,7 @@ const MyInfo : NextPage = () => {
                 <Link href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@example.com" target="_blank" className="cursor-pointer">
                     <div className="flex flex-col items-start justify-start">
                     <p className="text-sm  font-bold text-gray-400 ">Email</p>
-                    <h4 className="-mt-1  font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofi@gmail.com</h4>
+                    <h4 className="-mt-1 text-xs font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofiali@gmail.com</h4>
                 </div></Link>
             </div>
             <div> <hr /></div>
