@@ -36,7 +36,10 @@ export default function Home() {
       </Head>
       
         <Navbar />
+        <div>
+
         <MenuItem show={false}/>
+        </div>
         <Main />
         <AllTesimonies />
         <Projects />

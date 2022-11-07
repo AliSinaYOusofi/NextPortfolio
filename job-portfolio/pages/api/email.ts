@@ -59,8 +59,8 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
             res.json({message: "failed"});
             flag = false;
         } else {
-            res.json({message: "done", email, subject, description})
-            console.log("sent", email, subject, description);
+            res.json({message: "done"})
+            
         }
         
     });

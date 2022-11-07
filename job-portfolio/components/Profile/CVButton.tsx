@@ -6,8 +6,10 @@ const CVButton : NextPage = () => {
 
     const [{theme}] = useThemeProvider();
     return (
-        <Link    href="https://github.com/AliSinaYOusofi" 
-            target="_blank">
+        <Link    
+            href="https://github.com/AliSinaYOusofi" 
+            target="_blank"
+            >
             <button style={{backgroundColor: theme ? "" : "", 
                 color: theme ? "" : "black", boxShadow: theme ? "2px 2px 4px black" : "1px 2px 8px darkgray"}}  
             type="button" 
