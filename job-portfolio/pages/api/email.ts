@@ -5,7 +5,7 @@ import nodemailer from 'nodemailer';
 import Cors from 'cors';
 
 const cors = Cors({
-    methods: ['POST',],
+    methods: ['POST'],
 });
 
 function runMiddleware(
@@ -30,6 +30,8 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
 {
     const {email, subject, description} = req.body;
     
+    console.log(email, subject, description);
+    console.log(req.body);
     // should work here now
   
     let flag = true;
@@ -57,7 +59,7 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
             console.log(error);
             flag = false;
         } else {
-            console.log("sent");
+            console.log("sent", email, subject, description);
         }
         
     });
@@ -66,6 +68,6 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
     catch(error) {
         console.log(error);
     }
-    
+    console.log("Flag is: " + flag);
     flag ? res.status(200).json({message: "done"}) : res.status(501).json({message: "failed"});
 }
