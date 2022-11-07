@@ -26,8 +26,6 @@ const Main = dynamic( () => import ("../components/Main"), {ssr: true});
 export default function Home() {
   
   const [{theme}] = useThemeProvider(); // getting the current theme
-
-  console.log(theme, "current themein index");
   //
   return (
     <div style={{backgroundColor: theme ? "#060A11" : "#FBFAF2"}} id="main">

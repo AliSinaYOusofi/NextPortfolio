@@ -67,7 +67,8 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
     }
     catch(error) {
         console.log(error);
+        flag = false;
     }
     console.log("Flag is: " + flag);
-    flag ? res.status(200).json({message: "done"}) : res.status(501).json({message: "failed"});
+    flag ? res.status(200).json({message: "done", email, subject, description}) : res.status(501).json({message: "failed"});
 }
