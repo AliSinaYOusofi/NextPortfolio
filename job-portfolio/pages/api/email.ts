@@ -38,7 +38,7 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
 
     let transport = nodemailer.createTransport({
     host: "smtp.mailtrap.io",
-    port: 465,
+    port: 2525,
     auth: {
         user: "cb4bcfb37d9f18",
         pass: "ce8aada5bf241e"
@@ -56,9 +56,10 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
     try {
         transport.sendMail(message, function(error, info) {
         if (error) {
-            console.log(error);
+            res.json({message: "failed"});
             flag = false;
         } else {
+            res.json({message: "done", email, subject, description})
             console.log("sent", email, subject, description);
         }
         
@@ -69,6 +70,4 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
         console.log(error);
         flag = false;
     }
-    console.log("Flag is: " + flag);
-    flag ? res.status(200).json({message: "done", email, subject, description}) : res.status(501).json({message: "failed"});
 }
