@@ -9,6 +9,7 @@ import { useThemeProvider } from "../../context/ThemeProvider";
 interface Props {
     show: boolean
 }
+
 const MenuItem: NextPage<Props> = (props) => {
 
     const [{theme}] = useThemeProvider();
@@ -110,7 +111,7 @@ const MenuItem: NextPage<Props> = (props) => {
         backgroundColor: theme ? "#0A101D" : "#f4f3fb",
         color: theme ? "gray" : "white", boxShadow: theme ? "2px 2px 8px black" : "1px 2px 18px darkgray"
     }} className="menus hidden md:flex flex-row-reverse 
-        bg-black/50 fixed z-90 md:top-[85%]  lg:top[90%] 
+        bg-black/50 fixed z-90 md:top-[87%]  lg:top[91%] 
         top-[89%]   bitch w-fit
         justify-center items-center md:p-3 p-2  text-sm md:text-2xl lg:p-3 rounded-md md:gap-x-10 
         gap-x-1  transition-all duration-300 z-[999] blur-[0.7px]
