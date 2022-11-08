@@ -9,6 +9,7 @@ interface Props {
     header: string | null;
     icon : any | object | SVGAElement;
     text: string | null;
+    link: string;
 }
 
 const SkillsCard: NextPage<Props> = (props) => {
@@ -38,7 +39,7 @@ const SkillsCard: NextPage<Props> = (props) => {
                 <p className="mt-2">{props.text}</p>
             </div>
             <div className="flex justify-end mt-4">
-                <a href="#" className="text-xl font-medium text-indigo-500">{props.header}</a>
+                <a href={props.link} className="text-xl font-medium text-indigo-500">{props.header}</a>
             </div>
         </div>
     );

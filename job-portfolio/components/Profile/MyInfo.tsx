@@ -116,11 +116,12 @@ const MyInfo : NextPage = () => {
                     transition-all duration-300 bg-gradient-to-b from-black/30 opacity-40 group-hover:opacity-100 hover:from-black/60">
                     <AiOutlineMail size={30}/>
                 </div>
-                <Link href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@example.com" target="_blank" className="cursor-pointer">
+                <Link href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@gmail.com" target="_blank" className="cursor-pointer">
                     <div className="flex flex-col items-start justify-start">
-                    <p className="text-sm  font-bold text-gray-400 ">Email</p>
-                    <h4 className="-mt-1 text-xs font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofiali@gmail.com</h4>
-                </div></Link>
+                        <p className="text-sm  font-bold text-gray-400 ">Email</p>
+                        <h4 className="-mt-1 text-xs font-semibold el lg:text-xs text-ellipsis md:text-[0.7rem]">tinayousofiali@gmail.com</h4>
+                    </div>
+                </Link>
             </div>
             <div> <hr /></div>
             <div className="three flex justify-start items-center gap-x-3 group transition-all duration-300" ref={three} onMouseEnter={blurThree} onMouseLeave={undoBlurThree}> 
