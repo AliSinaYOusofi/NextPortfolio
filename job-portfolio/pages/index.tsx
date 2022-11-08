@@ -31,7 +31,7 @@ export default function Home() {
     <div style={{backgroundColor: theme ? "#060A11" : "#FBFAF2"}} id="main">
       <Head>
         <title>Ali Sina Portfolio</title>
-        <meta name="description" content="npm" />
+        <meta name="description" content="Ali Sina yousofi portfolio. AliSinaYousof portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content={ theme ? "black" : "blue"} />
