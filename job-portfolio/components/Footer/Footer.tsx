@@ -8,12 +8,16 @@ const Footer : NextPage = () => {
     const [{theme}] = useThemeProvider();
 
     return (
-        <footer style={{backgroundColor: theme ? "" : "white", color: !theme ? "" : "black"}} className="text-center bg-black/40 w-[80%] ml-auto mr-auto md:w-[80%] rounded-lg text-white mt-10 h-fit">
+        <footer style={{backgroundColor: theme ? "" : "white", color: !theme ? "" : "black",
+            boxShadow: theme ? "2px 2px 8px black" : "1px 2px 18px darkgray"}} 
+            className="text-center bg-black/40 w-[80%] ml-auto 
+            mr-auto md:w-[80%] rounded-lg text-white mt-10 h-fit
+            di divide-y-2">
             <div className="container md:px-6 md:pt-6 py-2">
                 <div className="flex justify-evenly md:mb-6">
                 
 
-                <Link style={{backgroundColor: theme ? "" : "#EDE4E0", color: theme ? "" : "black", border: theme ? "" : "1px solid black"}} target="_blank" href="https://twitter.com/shreddedDev" type="button" className="rounded-full border-2 border-white text-white  leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <Link style={{backgroundColor: theme ? "" : "white", color: theme ? "" : "black", border: theme ? "" : "1px solid black"}} target="_blank" href="https://twitter.com/shreddedDev" type="button" className="rounded-full border-2 border-white text-white  leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -30,7 +34,7 @@ const Footer : NextPage = () => {
                     </svg>
                 </Link>
 
-                <Link style={{backgroundColor: theme ? "" : "#EDE4E0", color: theme ? "" : "black", border: theme ? "" : "1px solid black"}} target={"_blank"} href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@example.com" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <Link style={{backgroundColor: theme ? "" : "white", color: theme ? "" : "black", border: theme ? "" : "1px solid black"}} target={"_blank"} href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tinayousofiali@example.com" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -47,7 +51,7 @@ const Footer : NextPage = () => {
                     </svg>
                 </Link>
                 
-                <Link style={{backgroundColor: theme ? "" : "#EDE4E0", color: theme ? "" : "black", border: theme ? "" : "1px solid black"}}  target={"_blank"} href="https://github.com/AliSinaYOusofi" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                <Link style={{backgroundColor: theme ? "" : "white", color: theme ? "" : "black", border: theme ? "" : "1px solid black"}}  target={"_blank"} href="https://github.com/AliSinaYOusofi" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
                     <svg aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"
@@ -66,7 +70,7 @@ const Footer : NextPage = () => {
                 </div>
             </div>
 
-            <div className="text-center p-4" style={{backgroundColor: theme ? "" : "#EDE4E0", color: !theme ? "black" : "white"}}>
+            <div className="text-center p-4" style={{backgroundColor: theme ? "" : "white", color: !theme ? "black" : "white"}}>
                 © 2022 Copyright 
                 <a className="" href="https://tailwind-elements.com/"> Ali Sina Yousofi</a>
             </div>

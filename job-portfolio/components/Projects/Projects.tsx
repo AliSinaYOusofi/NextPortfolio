@@ -9,11 +9,14 @@ import dict from '../../public/wp3642695-dictionary-wallpapers.jpg';
 import mongodb from '../../public/wp8724850-mongodb-wallpapers.jpg';
 import port from '../../public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg';
 import dev from '../../public/wp8358479-software-developer-wallpapers.jpg'
+import { useThemeProvider } from '../../context/ThemeProvider';
 
 const Projects: NextPage = () => {
+
+    const [{theme}] = useThemeProvider();
     return (
         <>  
-            <h1 id={"projects"} className="text-center mt-10 text-3xl capitalize"> Some of my projects Projects </h1>
+            <h1 style={{color: theme ? "" : "black"}} id={"projects"} className="text-center mt-10 text-3xl capitalize"> Some of my projects Projects </h1>
             <div className="w-[90%] ml-auto mr-auto h-full flex flex-row flex-wrap justify-center gap-x-5 items-cent">
                 <ProjectCards link={"https://github.com/AliSinaYOusofi/SpotfiyClone"} name={"Spotfiy Clone"} image={spotify} details={"Build with Reactjs, styled-components, javascript with Spotfiy Provided API."}/>
                 <ProjectCards link={"https://github.com/AliSinaYOusofi/NFT"} name={"OpenSea Clone"} image={nft} details={"Built with Nextjs, TailwindCss, CSS3, and javascript. It uses nftport.xyz provided API."}/>
