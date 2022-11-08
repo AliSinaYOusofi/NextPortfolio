@@ -31,10 +31,11 @@ export default function Home() {
     <div style={{backgroundColor: theme ? "#060A11" : "#FBFAF2"}} id="main">
       <Head>
         <title>Ali Sina Portfolio</title>
-        <meta name="description" content="Ali Sina yousofi portfolio. AliSinaYousof portfolio" />
+        <meta name="description" content="Ali Sina yousofi portfolio. AliSinaYousof portfolio. ali sina vercel, ali sina portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content={ theme ? "black" : "blue"} />
+        <meta name="theme-color" content={"white"} />
+        <meta name="robots" content="index, archive" />
       </Head>
         <Navbar />
         <div>

@@ -61,7 +61,7 @@ const MyImage: NextPage = () => {
                 <Image
                     id="rabbit"
                     src={me}
-                    alt="mena"
+                    alt="Ali Sina Yousofi"
                     width={400}
                     height={400}
                     
