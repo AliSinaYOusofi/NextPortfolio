@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Url } from "url";
+import { useThemeProvider } from "../../context/ThemeProvider";
 
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 }
 
 const ProjectCards : NextPage<Props> = (props) => {
-
+    const [{theme}] = useThemeProvider();
     return (
 
         <div className="mt-10 md:w-[16rem] w-[10rem] h-fit relative rounded-lg group overflow-hidden">
@@ -24,7 +25,7 @@ const ProjectCards : NextPage<Props> = (props) => {
             <div className="p-5 absolute md:top-[25%] md:mt-2 -mt-10 top-[20%] opacity-0 transition-all duration-300
                 group-hover:-mt-7 group-hover:opacity-[100]">
                 <p>
-                    <h5 className="mb-2 text-xs md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{props.name}</h5>
+                    <h5 className="mb-2 text-xs md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white" style={{color: !theme ? "white" : "gray"}}>{props.name}</h5>
                 </p>
                 <p className="mb-3 md:text-xl text-xs font-normal text-[#c0b9b4]">{props.details}</p>
                 

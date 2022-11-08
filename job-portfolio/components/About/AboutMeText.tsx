@@ -11,11 +11,9 @@ const AboutMeText: NextPage = () => {
             className="flex flex-col gap-y-3 text-white bg-black/40 md:py-12 md:px-2 p-2 rounded-lg">
             <h1 className="font-bold tracking-wide md:text-3xl text-xl text-purple-400 ml-5"> AboutMe </h1>
            
-            <p style={{color: theme ? "" : "black"}} className="text-white ml-5 md:text-xl text-sm"> I am Creative Designer and Back-end developer from Kabul, 
-                Afghanistan, good at both at back-end and fron-end. I 
-                love turning complex problems into simple, beautiful designs. 
+            <p style={{color: theme ? "" : "black"}} className="text-white ml-5 md:text-xl text-sm"> A Passionate full-stack developer with a year of experience. I have developed full-stack applications across various platforms using latest industry-adopted technologies and frameworks. 
             </p>
-           
+
         </div>
     );
 }
