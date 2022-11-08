@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
 
 html {
-  font-family: "Fira Code";
+  font-family: "Fira Code", "sans-serif";
   scroll-behavior: smooth;
 }
 
@@ -32,41 +32,6 @@ html {
       background-position-x: 500%;
     }
   }
-
-
-/* for styling may name ALi SIna YOusofi in Name Comp*/
-/* .p{
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-  
-   
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    box-shadow: 2px 2px 44px seashell;
-    background: white;
-    position: relative;
-    background: transparent;
-    color: #000;
-  }
-  
-.p:before{
-    content: "Ali Sina Yousofi";
-    position: absolute;
-    background: linear-gradient(darkgray, gray);
-    box-shadow: 2px 2px 14px seashell;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-size: 100% 90%;
-    line-height: 0.9;
-    clip-path: ellipse(120px 120px at -2.54% -9.25%);
-    animation: swing 5s infinite;
-    animation-direction: alternate;
-} */
 
 @keyframes swing{
     0%{
@@ -196,3 +161,11 @@ html {
   }
 } 
   
+.show {
+  visibility: visible;
+  transition: all 0.4s;
+}
+
+.unshow {
+  visibility: hidden;
+}
