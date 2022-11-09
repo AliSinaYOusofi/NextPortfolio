@@ -16,21 +16,8 @@ const Skills: NextPage = () => {
     let targetRef = React.useRef<HTMLDivElement>(null);
 
     
-    let hiddenElements = document.querySelectorAll(".one div");
     
-    console.log(hiddenElements);
 
-    // let observer = new IntersectionObserver( (elements) => {
-    //     elements.forEach( (entry) => {
-    //         if (entry.isIntersecting && targetRef.current)
-    //             entry.target.classList.add("show");
-    //         else
-    //             entry.target.classList.add("unshow");
-    //     });
-    //     console.log("called");
-    // }, { threshold: 0});
-    // hiddenElements.forEach( el => observer.observe(el))
-    
     return (
         <div style={{backgroundColor: theme ? "" : ""}} className=" text-white py-2 px-2 rounded-lg">
             <h1 className="font-extrabold text-2xl md:text-3xl mt-8"> <span className="text-purple-400">const</span> <span className="text-blue-400">Front-End = () : Skills =&gt;</span> <span className="text-pink-500">&#123;&#125;</span></h1>
