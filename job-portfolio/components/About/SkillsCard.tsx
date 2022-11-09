@@ -26,7 +26,7 @@ const SkillsCard: NextPage<Props> = (props) => {
             boxShadow: theme ? "2px 2px 4px black" : "1px 2px 8px darkgray"
             }} 
             id={"obs"}
-            className=" p-4 bg-black/30 rounded-lg mt-3 w-[49%]
+            className="card p-4 bg-black/30 rounded-lg mt-3 w-[49%]
             relative transition-all duration-300 
             hover:scale-[1.02]
             "
