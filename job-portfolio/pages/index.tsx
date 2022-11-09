@@ -20,7 +20,7 @@ const Navbar = dynamic( () => import ("../components/Navbar/Navbar"), {ssr: true
 const MenuItem = dynamic( () => import ("../components/Menu.tsx/MenuItem"), {ssr: true});
 const Footer = dynamic( () => import ("../components/Footer/Footer"), {ssr: true});
 const Contact = dynamic( () => import ("../components/Contact.tsx/Contarct"), {ssr: false});
-const Main = dynamic( () => import ("../components/Main"), {ssr: false});
+const Main = dynamic( () => import ("../components/Main"), {ssr: true});
 
 
 export default function Home() {
