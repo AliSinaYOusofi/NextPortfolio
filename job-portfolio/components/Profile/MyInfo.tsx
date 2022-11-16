@@ -143,7 +143,7 @@ const MyInfo : NextPage = () => {
                 </div>
                 <div className="flex flex-col items-start justify-start">
                     <p className="text-sm text-gray-400 font-bold">Location</p>
-                    <h4 className="-mt-1 font-semibold">India New Delhi</h4>
+                    <h4 className="-mt-1 font-semibold">Pakistan Islamabad</h4>
                 </div>
             </div>
                 <hr />
